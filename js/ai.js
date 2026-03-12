@@ -594,7 +594,11 @@ async function startBatchPreGenerate() {
     // Combine: next batch of new words + today's review words
     const newWords = allWords.filter(w => !studyData[w.word]).slice(0, dailyLimit);
     const reviewWords = Study.getReviewWords(allWords);
-    const targetWords = [...newWords, ...reviewWords];
+
+    // De-duplicate targets just in case
+    const targetMap = new Map();
+    [...newWords, ...reviewWords].forEach(w => targetMap.set(w.word, w));
+    const targetWords = Array.from(targetMap.values());
 
     if (targetWords.length === 0) {
         showToast('没有需要预热的单词');

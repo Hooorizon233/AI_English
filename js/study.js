@@ -158,7 +158,7 @@ const Study = {
         this.saveStudyData(studyData);
     },
 
-    // Start a new study session — wordCount is user-chosen, no hard limit
+    // Start a new study session
     async startSession(mode, wordCount) {
         const allWords = await WordBank.loadSelectedWords();
         if (allWords.length === 0) {
@@ -177,40 +177,116 @@ const Study = {
             // Shuffle review words
             words = words.sort(() => Math.random() - 0.5);
         } else {
-            // Learn mode: get new words, no hard daily limit
+            // Learn mode: get new words
             const newWords = this.getNewWords(allWords);
             if (newWords.length === 0) {
                 showToast('所有单词都已学过！');
                 return false;
             }
 
-            // Use user-chosen count, default to 20, cap by available words
+            // Use user-chosen count, default to 20
             const count = wordCount || 20;
             words = newWords.slice(0, count);
         }
 
+        const requiredCorrect = parseInt(localStorage.getItem('wordwise_required_correct') || '2');
+
         this.session = {
-            words,
-            currentIndex: 0,
+            queue: [...words], // Clone the array for our active queue
+            currentWord: null,
             mode,
-            results: { correct: 0, wrong: 0 }
+            totalWords: words.length,
+            learnedWords: 0,
+            requiredCorrect: requiredCorrect,
+            results: { correct: 0, wrong: 0, actions: 0 },
+            wordState: {} // Tracks consecutive correct answers per word in this session
         };
 
+        // Initialize word states
+        for (const w of words) {
+            this.session.wordState[w.word] = 0;
+        }
+
+        this._prepareNextWord();
         return true;
     },
 
-    getCurrentWord() {
-        if (this.session.currentIndex >= this.session.words.length) return null;
-        return this.session.words[this.session.currentIndex];
+    _prepareNextWord() {
+        if (this.session.queue.length === 0) {
+            this.session.currentWord = null;
+            return;
+        }
+        this.session.currentWord = this.session.queue[0];
     },
 
-    nextWord() {
-        this.session.currentIndex++;
-        return this.getCurrentWord();
+    getCurrentWord() {
+        return this.session.currentWord;
+    },
+
+    // Handle when user clicks "Known"
+    handleKnown() {
+        if (!this.session.currentWord) return false;
+
+        const word = this.session.currentWord.word;
+        this.session.wordState[word] = (this.session.wordState[word] || 0) + 1;
+        this.session.results.correct++;
+        this.session.results.actions++;
+
+        // Remove from front of queue
+        const currentObj = this.session.queue.shift();
+
+        // Check if fully learned
+        if (this.session.wordState[word] >= this.session.requiredCorrect) {
+            this.session.learnedWords++;
+            // Commit to long-term memory system since it's fully learned
+            this.markWord(word, true);
+
+            // Update streak & count
+            this.updateStreak();
+            if (this.session.mode === 'learn') {
+                this.incrementTodayCount('new');
+            } else {
+                this.incrementTodayCount('review');
+            }
+        } else {
+            // Not fully learned yet, put it back in the queue
+            // If queue is very small, just put it at the end. Otherwise insert it ~3-5 positions back
+            if (this.session.queue.length <= 3) {
+                this.session.queue.push(currentObj);
+            } else {
+                const insertPos = Math.min(this.session.queue.length - 1, Math.floor(Math.random() * 3) + 3);
+                this.session.queue.splice(insertPos, 0, currentObj);
+            }
+        }
+
+        this._prepareNextWord();
+        return this.isSessionComplete();
+    },
+
+    // Handle when user clicks "Unknown"
+    handleUnknown() {
+        if (!this.session.currentWord) return;
+
+        const wordObj = this.session.currentWord;
+        const word = wordObj.word;
+
+        // Reset consecutive correct count
+        this.session.wordState[word] = 0;
+        this.session.results.wrong++;
+        this.session.results.actions++;
+
+        // Mark as incorrect in long-term memory system if we've never marked it wrong today
+        this.markWord(word, false);
+
+        // Move to the back of the queue
+        this.session.queue.shift();
+        this.session.queue.push(wordObj);
+
+        this._prepareNextWord();
     },
 
     isSessionComplete() {
-        return this.session.currentIndex >= this.session.words.length;
+        return this.session.queue.length === 0;
     }
 };
 
@@ -330,11 +406,33 @@ function showCurrentWord() {
     // Clear AI content
     document.getElementById('ai-area').innerHTML = '';
 
+    // Update action buttons visibility
+    document.getElementById('study-actions').style.display = 'grid';
+    const continueBtn = document.getElementById('study-continue');
+    if (continueBtn) continueBtn.style.display = 'none';
+
     // Update progress
-    const total = Study.session.words.length;
-    const current = Study.session.currentIndex + 1;
-    document.getElementById('study-progress').textContent = `${current} / ${total}`;
-    document.getElementById('study-progress-bar').style.width = `${(current / total) * 100}%`;
+    const total = Study.session.totalWords;
+    const learned = Study.session.learnedWords;
+    document.getElementById('study-progress').textContent = `${learned} / ${total}`;
+
+    // Show partial progress based on word state
+    const required = Study.session.requiredCorrect;
+    const state = Study.session.wordState[word.word] || 0;
+
+    // Visual indicators for how well a word is known (dots)
+    let dotsHtml = '';
+    for (let i = 0; i < required; i++) {
+        dotsHtml += `<span style="display:inline-block; width:8px; height:8px; border-radius:50%; margin:0 2px; background:${i < state ? 'var(--success)' : 'var(--bg-tertiary)'}"></span>`;
+    }
+
+    // Update study tap hint to include progress dots
+    const hintEl = document.querySelector('.study-tap-hint');
+    if (hintEl) {
+        hintEl.innerHTML = `<div style="margin-bottom:8px">${dotsHtml}</div>点击卡片查看释义`;
+    }
+
+    document.getElementById('study-progress-bar').style.width = `${(learned / total) * 100}%`;
 }
 
 function flipCard() {
@@ -343,39 +441,46 @@ function flipCard() {
 }
 
 function markWord(known) {
-    const word = Study.getCurrentWord();
-    if (!word) return;
+    if (!known) {
+        // Unknown: flip card automatically, show continue button
+        const card = document.getElementById('study-card');
+        if (!card.classList.contains('flipped')) {
+            card.classList.add('flipped');
+        }
 
-    Study.markWord(word.word, known);
+        document.getElementById('study-actions').style.display = 'none';
 
-    if (known) {
-        Study.session.results.correct++;
+        // Add continue button if it doesn't exist
+        let continueBtn = document.getElementById('study-continue');
+        if (!continueBtn) {
+            continueBtn = document.createElement('button');
+            continueBtn.id = 'study-continue';
+            continueBtn.className = 'btn btn-primary btn-block mt-16';
+            continueBtn.textContent = '记住了，继续';
+            continueBtn.onclick = () => {
+                Study.handleUnknown();
+                showCurrentWord();
+            };
+            document.getElementById('page-study').appendChild(continueBtn);
+        }
+        continueBtn.style.display = 'block';
     } else {
-        Study.session.results.wrong++;
-    }
+        // Known: handle it and move on
+        const isComplete = Study.handleKnown();
 
-    // Update streak
-    Study.updateStreak();
-
-    // Update today's count
-    if (Study.session.mode === 'learn') {
-        Study.incrementTodayCount('new');
-    } else {
-        Study.incrementTodayCount('review');
-    }
-
-    // Next word
-    Study.nextWord();
-    if (Study.isSessionComplete()) {
-        finishSession();
-    } else {
-        showCurrentWord();
+        if (isComplete) {
+            finishSession();
+        } else {
+            showCurrentWord();
+        }
     }
 }
 
 async function finishSession() {
     const results = Study.session.results;
-    const total = results.correct + results.wrong;
+    // Calculate unique words correctly handled
+    const learned = Study.session.learnedWords;
+    const totalActions = results.actions;
     const mode = Study.session.mode;
 
     // Check if there are more new words available for "continue learning"
@@ -395,7 +500,7 @@ async function finishSession() {
     const continueBtn = hasMoreWords ? `
         <button class="btn btn-block btn-lg mt-8" onclick="closeFinishModal(); startStudy();" 
                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
-          🔥 继续学习
+          🔥 继续学新词
         </button>` : '';
 
     const reviewBtn = hasReviewWords ? `
@@ -411,19 +516,19 @@ async function finishSession() {
           <div style="font-size:64px;margin-bottom:16px;">🎉</div>
           <h2 style="margin-bottom:8px;">学习完成！</h2>
           <p class="text-secondary" style="margin-bottom:24px;">
-            ${mode === 'learn' ? '新学' : '复习'}了 ${total} 个单词
+            ${mode === 'learn' ? '新学' : '复习'}了 ${learned} 个单词
           </p>
           <div class="stats-grid">
             <div class="stat-card">
               <div class="stat-value text-success">${results.correct}</div>
-              <div class="stat-label">认识</div>
+              <div class="stat-label">点认识</div>
             </div>
             <div class="stat-card">
               <div class="stat-value text-danger">${results.wrong}</div>
-              <div class="stat-label">不认识</div>
+              <div class="stat-label">点不认识</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">${total > 0 ? Math.round((results.correct / total) * 100) : 0}%</div>
+              <div class="stat-value">${totalActions > 0 ? Math.round((results.correct / totalActions) * 100) : 0}%</div>
               <div class="stat-label">正确率</div>
             </div>
           </div>
@@ -436,6 +541,10 @@ async function finishSession() {
       </div>
     </div>
   `;
+
+    // Remove any continue button
+    const contBtn = document.getElementById('study-continue');
+    if (contBtn) contBtn.remove();
 
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 }

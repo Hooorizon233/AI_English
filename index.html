@@ -297,6 +297,30 @@
         </div>
         <div class="settings-item">
           <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#007AFF;">🔄</div>
+            <span class="settings-item-label">学会需要连续认识</span>
+          </div>
+          <select class="form-select" id="required-correct-count" style="width:80px;" onchange="saveLearningSettings()">
+            <option value="1">1 次</option>
+            <option value="2" selected>2 次</option>
+            <option value="3">3 次</option>
+            <option value="4">4 次</option>
+            <option value="5">5 次</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#5856D6;">🔃</div>
+            <span class="settings-item-label">词库排序方式</span>
+          </div>
+          <select class="form-select" id="sort-mode-select" style="width:110px;" onchange="saveLearningSettings()">
+            <option value="frequency" selected>词频优先</option>
+            <option value="random">完全乱序</option>
+            <option value="alphabetical">字母顺序</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
             <div class="settings-item-icon" style="background:#1C1C1E;">🌙</div>
             <span class="settings-item-label">深色模式</span>
           </div>

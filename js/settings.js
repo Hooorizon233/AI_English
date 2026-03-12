@@ -18,6 +18,14 @@ function loadSettingsPage() {
     const dailyWords = localStorage.getItem('wordwise_daily_new') || '20';
     document.getElementById('daily-new-words').value = dailyWords;
 
+    // Learning settings
+    const requiredCorrect = localStorage.getItem('wordwise_required_correct') || '2';
+    document.getElementById('required-correct-count').value = requiredCorrect;
+
+    // Sort mode
+    const sortMode = localStorage.getItem('wordwise_sort_mode') || 'frequency';
+    document.getElementById('sort-mode-select').value = sortMode;
+
     // Dark mode
     document.getElementById('dark-mode-toggle').checked = document.documentElement.getAttribute('data-theme') === 'dark';
 
@@ -176,4 +184,14 @@ function clearAllData() {
 function logout() {
     Auth.logout();
     navigateTo('login');
+}
+
+function saveLearningSettings() {
+    const requiredCorrect = document.getElementById('required-correct-count').value;
+    localStorage.setItem('wordwise_required_correct', requiredCorrect);
+    
+    const sortMode = document.getElementById('sort-mode-select').value;
+    localStorage.setItem('wordwise_sort_mode', sortMode);
+    
+    showToast('学习设置已保存 ✓');
 }
