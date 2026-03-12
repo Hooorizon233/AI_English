@@ -1,0 +1,902 @@
+[
+  {
+    "word": "abide",
+    "phonetic": "/əˈbaɪd/",
+    "translation": "v. 遵守；忍受",
+    "example": "We must abide by the rules."
+  },
+  {
+    "word": "abnormal",
+    "phonetic": "/æbˈnɔːrml/",
+    "translation": "adj. 异常的",
+    "example": "The test results were abnormal."
+  },
+  {
+    "word": "abolish",
+    "phonetic": "/əˈbɒlɪʃ/",
+    "translation": "v. 废除",
+    "example": "They abolished the old system."
+  },
+  {
+    "word": "abrupt",
+    "phonetic": "/əˈbrʌpt/",
+    "translation": "adj. 突然的",
+    "example": "There was an abrupt change."
+  },
+  {
+    "word": "abstain",
+    "phonetic": "/əbˈsteɪn/",
+    "translation": "v. 戒；弃权",
+    "example": "He abstained from voting."
+  },
+  {
+    "word": "accelerate",
+    "phonetic": "/əkˈseləreɪt/",
+    "translation": "v. 加速",
+    "example": "Economic growth has accelerated."
+  },
+  {
+    "word": "accumulate",
+    "phonetic": "/əˈkjuːmjəleɪt/",
+    "translation": "v. 积累",
+    "example": "Knowledge accumulates over time."
+  },
+  {
+    "word": "acquaint",
+    "phonetic": "/əˈkweɪnt/",
+    "translation": "v. 使熟悉",
+    "example": "Let me acquaint you with the facts."
+  },
+  {
+    "word": "activate",
+    "phonetic": "/ˈæktɪveɪt/",
+    "translation": "v. 激活",
+    "example": "Activate your account online."
+  },
+  {
+    "word": "adhere",
+    "phonetic": "/ədˈhɪər/",
+    "translation": "v. 坚持；粘附",
+    "example": "Adhere to the guidelines strictly."
+  },
+  {
+    "word": "advent",
+    "phonetic": "/ˈædvent/",
+    "translation": "n. 出现；到来",
+    "example": "The advent of the internet changed everything."
+  },
+  {
+    "word": "adverse",
+    "phonetic": "/ˈædvɜːrs/",
+    "translation": "adj. 不利的",
+    "example": "Adverse weather delayed the flight."
+  },
+  {
+    "word": "aggravate",
+    "phonetic": "/ˈæɡrəveɪt/",
+    "translation": "v. 加重",
+    "example": "Stress aggravates the condition."
+  },
+  {
+    "word": "alienate",
+    "phonetic": "/ˈeɪliəneɪt/",
+    "translation": "v. 疏远",
+    "example": "His behavior alienated his friends."
+  },
+  {
+    "word": "alleviate",
+    "phonetic": "/əˈliːvieɪt/",
+    "translation": "v. 减轻",
+    "example": "This will alleviate the pain."
+  },
+  {
+    "word": "allot",
+    "phonetic": "/əˈlɒt/",
+    "translation": "v. 分配",
+    "example": "Each person was allotted a task."
+  },
+  {
+    "word": "ambiguous",
+    "phonetic": "/æmˈbɪɡjuəs/",
+    "translation": "adj. 模棱两可的",
+    "example": "Her answer was ambiguous."
+  },
+  {
+    "word": "amend",
+    "phonetic": "/əˈmend/",
+    "translation": "v. 修改",
+    "example": "The law was amended."
+  },
+  {
+    "word": "analogy",
+    "phonetic": "/əˈnælədʒi/",
+    "translation": "n. 类比",
+    "example": "Draw an analogy between A and B."
+  },
+  {
+    "word": "annihilate",
+    "phonetic": "/əˈnaɪəleɪt/",
+    "translation": "v. 消灭",
+    "example": "The army annihilated the enemy."
+  },
+  {
+    "word": "anonymous",
+    "phonetic": "/əˈnɒnɪməs/",
+    "translation": "adj. 匿名的",
+    "example": "An anonymous tip led to the arrest."
+  },
+  {
+    "word": "anticipate",
+    "phonetic": "/ænˈtɪsɪpeɪt/",
+    "translation": "v. 预期",
+    "example": "We did not anticipate this problem."
+  },
+  {
+    "word": "apparatus",
+    "phonetic": "/ˌæpəˈreɪtəs/",
+    "translation": "n. 装置",
+    "example": "The laboratory apparatus was expensive."
+  },
+  {
+    "word": "appease",
+    "phonetic": "/əˈpiːz/",
+    "translation": "v. 安抚",
+    "example": "He tried to appease the angry crowd."
+  },
+  {
+    "word": "apt",
+    "phonetic": "/æpt/",
+    "translation": "adj. 恰当的；易于",
+    "example": "She is apt to forget things."
+  },
+  {
+    "word": "arbitrary",
+    "phonetic": "/ˈɑːrbɪtrəri/",
+    "translation": "adj. 任意的",
+    "example": "The rule seemed arbitrary."
+  },
+  {
+    "word": "array",
+    "phonetic": "/əˈreɪ/",
+    "translation": "n. 排列；大量",
+    "example": "An impressive array of talent."
+  },
+  {
+    "word": "articulate",
+    "phonetic": "/ɑːrˈtɪkjʊleɪt/",
+    "translation": "adj. 表达清晰的 v. 表达",
+    "example": "She articulated her views clearly."
+  },
+  {
+    "word": "ascertain",
+    "phonetic": "/ˌæsərˈteɪn/",
+    "translation": "v. 查明",
+    "example": "We need to ascertain the facts."
+  },
+  {
+    "word": "aspire",
+    "phonetic": "/əˈspaɪər/",
+    "translation": "v. 渴望",
+    "example": "She aspires to greatness."
+  },
+  {
+    "word": "assert",
+    "phonetic": "/əˈsɜːrt/",
+    "translation": "v. 断言",
+    "example": "He asserted his authority."
+  },
+  {
+    "word": "assimilate",
+    "phonetic": "/əˈsɪmɪleɪt/",
+    "translation": "v. 吸收；同化",
+    "example": "Immigrants assimilate into the culture."
+  },
+  {
+    "word": "attribute",
+    "phonetic": "/əˈtrɪbjuːt/",
+    "translation": "v. 归因于 n. 属性",
+    "example": "She attributes her success to hard work."
+  },
+  {
+    "word": "authentic",
+    "phonetic": "/ɔːˈθentɪk/",
+    "translation": "adj. 真实的",
+    "example": "An authentic historical document."
+  },
+  {
+    "word": "avert",
+    "phonetic": "/əˈvɜːrt/",
+    "translation": "v. 避免",
+    "example": "The crisis was averted."
+  },
+  {
+    "word": "bewilder",
+    "phonetic": "/bɪˈwɪldər/",
+    "translation": "v. 使困惑",
+    "example": "The question bewildered everyone."
+  },
+  {
+    "word": "bias",
+    "phonetic": "/ˈbaɪəs/",
+    "translation": "n. 偏见",
+    "example": "The report was free from bias."
+  },
+  {
+    "word": "blend",
+    "phonetic": "/blend/",
+    "translation": "v. 混合 n. 混合物",
+    "example": "Blend the ingredients together."
+  },
+  {
+    "word": "blunt",
+    "phonetic": "/blʌnt/",
+    "translation": "adj. 钝的；直率的",
+    "example": "He was blunt in his criticism."
+  },
+  {
+    "word": "bolster",
+    "phonetic": "/ˈbəʊlstər/",
+    "translation": "v. 支持；增强",
+    "example": "The data bolsters our argument."
+  },
+  {
+    "word": "brood",
+    "phonetic": "/bruːd/",
+    "translation": "v. 沉思 n. 一窝",
+    "example": "Do not brood over past failures."
+  },
+  {
+    "word": "cascade",
+    "phonetic": "/kæˈskeɪd/",
+    "translation": "n. 瀑布 v. 倾泻",
+    "example": "A cascade of water fell from the cliff."
+  },
+  {
+    "word": "certify",
+    "phonetic": "/ˈsɜːrtɪfaɪ/",
+    "translation": "v. 证明",
+    "example": "The document was certified by a lawyer."
+  },
+  {
+    "word": "cherish",
+    "phonetic": "/ˈtʃerɪʃ/",
+    "translation": "v. 珍惜",
+    "example": "She cherishes her memories."
+  },
+  {
+    "word": "chronic",
+    "phonetic": "/ˈkrɒnɪk/",
+    "translation": "adj. 慢性的",
+    "example": "He has a chronic illness."
+  },
+  {
+    "word": "circumvent",
+    "phonetic": "/ˌsɜːrkəmˈvent/",
+    "translation": "v. 规避",
+    "example": "They circumvented the regulations."
+  },
+  {
+    "word": "cling",
+    "phonetic": "/klɪŋ/",
+    "translation": "v. 紧抓；坚持",
+    "example": "The child clung to his mother."
+  },
+  {
+    "word": "coerce",
+    "phonetic": "/kəʊˈɜːrs/",
+    "translation": "v. 强迫",
+    "example": "He was coerced into signing."
+  },
+  {
+    "word": "coherent",
+    "phonetic": "/kəʊˈhɪərənt/",
+    "translation": "adj. 连贯的",
+    "example": "A coherent strategy is essential."
+  },
+  {
+    "word": "coincide",
+    "phonetic": "/ˌkəʊɪnˈsaɪd/",
+    "translation": "v. 巧合",
+    "example": "Our visits coincided."
+  },
+  {
+    "word": "collaborate",
+    "phonetic": "/kəˈlæbəreɪt/",
+    "translation": "v. 合作",
+    "example": "Scientists collaborated on the research."
+  },
+  {
+    "word": "commemorate",
+    "phonetic": "/kəˈmeməreɪt/",
+    "translation": "v. 纪念",
+    "example": "A statue to commemorate the hero."
+  },
+  {
+    "word": "compact",
+    "phonetic": "/ˈkɒmpækt/",
+    "translation": "adj. 紧凑的",
+    "example": "The apartment is compact but efficient."
+  },
+  {
+    "word": "compatible",
+    "phonetic": "/kəmˈpætɪbl/",
+    "translation": "adj. 兼容的",
+    "example": "The two systems are compatible."
+  },
+  {
+    "word": "compel",
+    "phonetic": "/kəmˈpel/",
+    "translation": "v. 迫使",
+    "example": "Circumstances compelled him to act."
+  },
+  {
+    "word": "compile",
+    "phonetic": "/kəmˈpaɪl/",
+    "translation": "v. 汇编",
+    "example": "She compiled a bibliography."
+  },
+  {
+    "word": "comply",
+    "phonetic": "/kəmˈplaɪ/",
+    "translation": "v. 遵从",
+    "example": "You must comply with regulations."
+  },
+  {
+    "word": "comprise",
+    "phonetic": "/kəmˈpraɪz/",
+    "translation": "v. 包含",
+    "example": "The committee comprises 12 members."
+  },
+  {
+    "word": "compulsory",
+    "phonetic": "/kəmˈpʌlsəri/",
+    "translation": "adj. 强制的",
+    "example": "Military service is compulsory."
+  },
+  {
+    "word": "concede",
+    "phonetic": "/kənˈsiːd/",
+    "translation": "v. 承认",
+    "example": "She conceded the point."
+  },
+  {
+    "word": "conceive",
+    "phonetic": "/kənˈsiːv/",
+    "translation": "v. 构想",
+    "example": "I cannot conceive of such a plan."
+  },
+  {
+    "word": "condemn",
+    "phonetic": "/kənˈdem/",
+    "translation": "v. 谴责",
+    "example": "Leaders condemned the attack."
+  },
+  {
+    "word": "confine",
+    "phonetic": "/kənˈfaɪn/",
+    "translation": "v. 限制",
+    "example": "He was confined to his room."
+  },
+  {
+    "word": "conform",
+    "phonetic": "/kənˈfɔːrm/",
+    "translation": "v. 遵守",
+    "example": "Conform to safety standards."
+  },
+  {
+    "word": "confront",
+    "phonetic": "/kənˈfrʌnt/",
+    "translation": "v. 面对",
+    "example": "We must confront the reality."
+  },
+  {
+    "word": "consensus",
+    "phonetic": "/kənˈsensəs/",
+    "translation": "n. 共识",
+    "example": "A consensus was reached."
+  },
+  {
+    "word": "consolidate",
+    "phonetic": "/kənˈsɒlɪdeɪt/",
+    "translation": "v. 巩固",
+    "example": "Consolidate your gains."
+  },
+  {
+    "word": "conspicuous",
+    "phonetic": "/kənˈspɪkjuəs/",
+    "translation": "adj. 显著的",
+    "example": "His absence was conspicuous."
+  },
+  {
+    "word": "constitute",
+    "phonetic": "/ˈkɒnstɪtjuːt/",
+    "translation": "v. 构成",
+    "example": "This constitutes a serious threat."
+  },
+  {
+    "word": "constrain",
+    "phonetic": "/kənˈstreɪn/",
+    "translation": "v. 约束",
+    "example": "We are constrained by limited resources."
+  },
+  {
+    "word": "contemplate",
+    "phonetic": "/ˈkɒntəmpleɪt/",
+    "translation": "v. 沉思",
+    "example": "He contemplated the meaning of life."
+  },
+  {
+    "word": "contend",
+    "phonetic": "/kənˈtend/",
+    "translation": "v. 竞争；声称",
+    "example": "I contend that the theory is wrong."
+  },
+  {
+    "word": "contradict",
+    "phonetic": "/ˌkɒntrəˈdɪkt/",
+    "translation": "v. 反驳",
+    "example": "The facts contradict his story."
+  },
+  {
+    "word": "convergence",
+    "phonetic": "/kənˈvɜːdʒəns/",
+    "translation": "n. 汇合",
+    "example": "A convergence of ideas occurred."
+  },
+  {
+    "word": "convey",
+    "phonetic": "/kənˈveɪ/",
+    "translation": "v. 传达",
+    "example": "Words cannot convey my gratitude."
+  },
+  {
+    "word": "coordinate",
+    "phonetic": "/kəʊˈɔːrdɪneɪt/",
+    "translation": "v. 协调",
+    "example": "Coordinate the rescue efforts."
+  },
+  {
+    "word": "correlate",
+    "phonetic": "/ˈkɒrəleɪt/",
+    "translation": "v. 使相关",
+    "example": "Income correlates with education."
+  },
+  {
+    "word": "corrode",
+    "phonetic": "/kəˈrəʊd/",
+    "translation": "v. 腐蚀",
+    "example": "Salt water corrodes metal."
+  },
+  {
+    "word": "counsel",
+    "phonetic": "/ˈkaʊnsl/",
+    "translation": "n./v. 建议",
+    "example": "He sought legal counsel."
+  },
+  {
+    "word": "counterpart",
+    "phonetic": "/ˈkaʊntərpɑːrt/",
+    "translation": "n. 对应者",
+    "example": "She met her Chinese counterpart."
+  },
+  {
+    "word": "curb",
+    "phonetic": "/kɜːrb/",
+    "translation": "v. 控制 n. 路缘",
+    "example": "Curb your enthusiasm."
+  },
+  {
+    "word": "customary",
+    "phonetic": "/ˈkʌstəməri/",
+    "translation": "adj. 习惯的",
+    "example": "It is customary to tip in restaurants."
+  },
+  {
+    "word": "deceive",
+    "phonetic": "/dɪˈsiːv/",
+    "translation": "v. 欺骗",
+    "example": "Do not let appearances deceive you."
+  },
+  {
+    "word": "dedicate",
+    "phonetic": "/ˈdedɪkeɪt/",
+    "translation": "v. 奉献",
+    "example": "She dedicated her life to teaching."
+  },
+  {
+    "word": "deem",
+    "phonetic": "/diːm/",
+    "translation": "v. 认为",
+    "example": "The plan was deemed impractical."
+  },
+  {
+    "word": "default",
+    "phonetic": "/dɪˈfɔːlt/",
+    "translation": "n. 默认 v. 违约",
+    "example": "He defaulted on his loan."
+  },
+  {
+    "word": "deficiency",
+    "phonetic": "/dɪˈfɪʃnsi/",
+    "translation": "n. 缺乏",
+    "example": "Iron deficiency is common."
+  },
+  {
+    "word": "defy",
+    "phonetic": "/dɪˈfaɪ/",
+    "translation": "v. 违抗",
+    "example": "She defied conventional wisdom."
+  },
+  {
+    "word": "degenerate",
+    "phonetic": "/dɪˈdʒenəreɪt/",
+    "translation": "v. 退化",
+    "example": "The discussion degenerated into an argument."
+  },
+  {
+    "word": "delegate",
+    "phonetic": "/ˈdelɪɡeɪt/",
+    "translation": "v. 委托 n. 代表",
+    "example": "Delegate responsibilities to your team."
+  },
+  {
+    "word": "deliberate",
+    "phonetic": "/dɪˈlɪbərət/",
+    "translation": "adj. 故意的",
+    "example": "It was a deliberate act."
+  },
+  {
+    "word": "denounce",
+    "phonetic": "/dɪˈnaʊns/",
+    "translation": "v. 谴责",
+    "example": "The president denounced terrorism."
+  },
+  {
+    "word": "depict",
+    "phonetic": "/dɪˈpɪkt/",
+    "translation": "v. 描绘",
+    "example": "The novel depicts rural life."
+  },
+  {
+    "word": "deplete",
+    "phonetic": "/dɪˈpliːt/",
+    "translation": "v. 耗尽",
+    "example": "Fish stocks are severely depleted."
+  },
+  {
+    "word": "deprive",
+    "phonetic": "/dɪˈpraɪv/",
+    "translation": "v. 剥夺",
+    "example": "War deprived them of a normal childhood."
+  },
+  {
+    "word": "designate",
+    "phonetic": "/ˈdezɪɡneɪt/",
+    "translation": "v. 指定",
+    "example": "She was designated as the leader."
+  },
+  {
+    "word": "desperate",
+    "phonetic": "/ˈdespərət/",
+    "translation": "adj. 绝望的",
+    "example": "They made a desperate attempt."
+  },
+  {
+    "word": "deteriorate",
+    "phonetic": "/dɪˈtɪəriəreɪt/",
+    "translation": "v. 恶化",
+    "example": "Relations have deteriorated."
+  },
+  {
+    "word": "deviate",
+    "phonetic": "/ˈdiːvieɪt/",
+    "translation": "v. 偏离",
+    "example": "Do not deviate from the topic."
+  },
+  {
+    "word": "diffuse",
+    "phonetic": "/dɪˈfjuːz/",
+    "translation": "v. 传播 adj. 弥漫的",
+    "example": "The light diffused through the curtain."
+  },
+  {
+    "word": "dilemma",
+    "phonetic": "/dɪˈlemə/",
+    "translation": "n. 困境",
+    "example": "Facing a moral dilemma."
+  },
+  {
+    "word": "diminish",
+    "phonetic": "/dɪˈmɪnɪʃ/",
+    "translation": "v. 减少",
+    "example": "The pain gradually diminished."
+  },
+  {
+    "word": "discern",
+    "phonetic": "/dɪˈsɜːrn/",
+    "translation": "v. 辨别",
+    "example": "It is hard to discern the truth."
+  },
+  {
+    "word": "disclose",
+    "phonetic": "/dɪˈskləʊz/",
+    "translation": "v. 揭露",
+    "example": "She refused to disclose her sources."
+  },
+  {
+    "word": "discord",
+    "phonetic": "/ˈdɪskɔːrd/",
+    "translation": "n. 不和",
+    "example": "Discord arose among the members."
+  },
+  {
+    "word": "discretion",
+    "phonetic": "/dɪˈskreʃn/",
+    "translation": "n. 谨慎",
+    "example": "Use your discretion."
+  },
+  {
+    "word": "disperse",
+    "phonetic": "/dɪˈspɜːrs/",
+    "translation": "v. 驱散；分散",
+    "example": "Police dispersed the crowd."
+  },
+  {
+    "word": "disposition",
+    "phonetic": "/ˌdɪspəˈzɪʃn/",
+    "translation": "n. 性情；倾向",
+    "example": "She has a cheerful disposition."
+  },
+  {
+    "word": "disrupt",
+    "phonetic": "/dɪsˈrʌpt/",
+    "translation": "v. 中断",
+    "example": "The storm disrupted power supply."
+  },
+  {
+    "word": "distort",
+    "phonetic": "/dɪˈstɔːrt/",
+    "translation": "v. 扭曲",
+    "example": "Do not distort the facts."
+  },
+  {
+    "word": "doctrine",
+    "phonetic": "/ˈdɒktrɪn/",
+    "translation": "n. 教义；学说",
+    "example": "The doctrine of free trade."
+  },
+  {
+    "word": "dominant",
+    "phonetic": "/ˈdɒmɪnənt/",
+    "translation": "adj. 主导的",
+    "example": "The dominant theory in the field."
+  },
+  {
+    "word": "doom",
+    "phonetic": "/duːm/",
+    "translation": "n. 厄运 v. 注定",
+    "example": "The project was doomed to fail."
+  },
+  {
+    "word": "durable",
+    "phonetic": "/ˈdjʊərəbl/",
+    "translation": "adj. 耐用的",
+    "example": "The material is very durable."
+  },
+  {
+    "word": "elaborate",
+    "phonetic": "/ɪˈlæbərət/",
+    "translation": "adj. 精心的 v. 详述",
+    "example": "Please elaborate on this point."
+  },
+  {
+    "word": "eligible",
+    "phonetic": "/ˈelɪdʒəbl/",
+    "translation": "adj. 有资格的",
+    "example": "Only citizens are eligible."
+  },
+  {
+    "word": "elicit",
+    "phonetic": "/ɪˈlɪsɪt/",
+    "translation": "v. 引出",
+    "example": "The question elicited a strong response."
+  },
+  {
+    "word": "embrace",
+    "phonetic": "/ɪmˈbreɪs/",
+    "translation": "v. 拥抱；接受",
+    "example": "Embrace new challenges."
+  },
+  {
+    "word": "embark",
+    "phonetic": "/ɪmˈbɑːrk/",
+    "translation": "v. 着手",
+    "example": "She embarked on a new career."
+  },
+  {
+    "word": "embed",
+    "phonetic": "/ɪmˈbed/",
+    "translation": "v. 嵌入",
+    "example": "Values embedded in the culture."
+  },
+  {
+    "word": "empirical",
+    "phonetic": "/ɪmˈpɪrɪkl/",
+    "translation": "adj. 经验主义的",
+    "example": "Empirical research is needed."
+  },
+  {
+    "word": "encompass",
+    "phonetic": "/ɪnˈkʌmpəs/",
+    "translation": "v. 包含",
+    "example": "The study encompasses many topics."
+  },
+  {
+    "word": "endeavor",
+    "phonetic": "/ɪnˈdevər/",
+    "translation": "v./n. 努力",
+    "example": "A worthy endeavor."
+  },
+  {
+    "word": "endorse",
+    "phonetic": "/ɪnˈdɔːrs/",
+    "translation": "v. 支持",
+    "example": "The committee endorsed the plan."
+  },
+  {
+    "word": "engender",
+    "phonetic": "/ɪnˈdʒendər/",
+    "translation": "v. 产生",
+    "example": "Trust engenders cooperation."
+  },
+  {
+    "word": "enlighten",
+    "phonetic": "/ɪnˈlaɪtn/",
+    "translation": "v. 启发",
+    "example": "Please enlighten me."
+  },
+  {
+    "word": "entail",
+    "phonetic": "/ɪnˈteɪl/",
+    "translation": "v. 需要",
+    "example": "What does the job entail?"
+  },
+  {
+    "word": "erode",
+    "phonetic": "/ɪˈrəʊd/",
+    "translation": "v. 侵蚀",
+    "example": "Trust has been eroded."
+  },
+  {
+    "word": "escalate",
+    "phonetic": "/ˈeskəleɪt/",
+    "translation": "v. 升级",
+    "example": "Tensions have escalated."
+  },
+  {
+    "word": "evoke",
+    "phonetic": "/ɪˈvəʊk/",
+    "translation": "v. 唤起",
+    "example": "The song evokes happy memories."
+  },
+  {
+    "word": "exaggerate",
+    "phonetic": "/ɪɡˈzædʒəreɪt/",
+    "translation": "v. 夸大",
+    "example": "He tends to exaggerate."
+  },
+  {
+    "word": "excerpt",
+    "phonetic": "/ˈeksɜːrpt/",
+    "translation": "n. 摘录",
+    "example": "Read this excerpt from the book."
+  },
+  {
+    "word": "exert",
+    "phonetic": "/ɪɡˈzɜːrt/",
+    "translation": "v. 施加",
+    "example": "Exert more effort on this task."
+  },
+  {
+    "word": "explicit",
+    "phonetic": "/ɪkˈsplɪsɪt/",
+    "translation": "adj. 明确的",
+    "example": "Give explicit instructions."
+  },
+  {
+    "word": "exploit",
+    "phonetic": "/ɪkˈsplɔɪt/",
+    "translation": "v. 开发；剥削",
+    "example": "Exploit renewable energy sources."
+  },
+  {
+    "word": "extract",
+    "phonetic": "/ˈekstrækt/",
+    "translation": "v. 提取",
+    "example": "Extract the main ideas."
+  },
+  {
+    "word": "fabricate",
+    "phonetic": "/ˈfæbrɪkeɪt/",
+    "translation": "v. 捏造",
+    "example": "He fabricated the entire story."
+  },
+  {
+    "word": "facilitate",
+    "phonetic": "/fəˈsɪlɪteɪt/",
+    "translation": "v. 促进",
+    "example": "Technology facilitates learning."
+  },
+  {
+    "word": "feasible",
+    "phonetic": "/ˈfiːzəbl/",
+    "translation": "adj. 可行的",
+    "example": "Is this approach feasible?"
+  },
+  {
+    "word": "flaw",
+    "phonetic": "/flɔː/",
+    "translation": "n. 缺陷",
+    "example": "A fundamental flaw in the design."
+  },
+  {
+    "word": "fluctuate",
+    "phonetic": "/ˈflʌktʃueɪt/",
+    "translation": "v. 波动",
+    "example": "Temperatures fluctuate greatly."
+  },
+  {
+    "word": "formidable",
+    "phonetic": "/ˈfɔːrmɪdəbl/",
+    "translation": "adj. 强大的",
+    "example": "A formidable challenge."
+  },
+  {
+    "word": "foster",
+    "phonetic": "/ˈfɒstər/",
+    "translation": "v. 培养",
+    "example": "Foster innovation and creativity."
+  },
+  {
+    "word": "fragile",
+    "phonetic": "/ˈfrædʒaɪl/",
+    "translation": "adj. 脆弱的",
+    "example": "The peace is fragile."
+  },
+  {
+    "word": "genuine",
+    "phonetic": "/ˈdʒenjuɪn/",
+    "translation": "adj. 真实的",
+    "example": "A genuine desire to help."
+  },
+  {
+    "word": "hamper",
+    "phonetic": "/ˈhæmpər/",
+    "translation": "v. 阻碍",
+    "example": "Lack of funds hampered the project."
+  },
+  {
+    "word": "hazard",
+    "phonetic": "/ˈhæzərd/",
+    "translation": "n. 危险",
+    "example": "A potential health hazard."
+  },
+  {
+    "word": "hierarchy",
+    "phonetic": "/ˈhaɪərɑːrki/",
+    "translation": "n. 等级制度",
+    "example": "The corporate hierarchy."
+  },
+  {
+    "word": "hinder",
+    "phonetic": "/ˈhɪndər/",
+    "translation": "v. 阻碍",
+    "example": "Bad weather hindered the progress."
+  },
+  {
+    "word": "hypothesis",
+    "phonetic": "/haɪˈpɒθəsɪs/",
+    "translation": "n. 假设",
+    "example": "Test the hypothesis experimentally."
+  }
+]
