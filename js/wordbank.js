@@ -42,16 +42,21 @@ const WordBank = {
     async loadBank(bankId) {
         if (this.loadedBanks[bankId]) return this.loadedBanks[bankId];
 
-        try {
-            const response = await fetch(`data/${bankId}.json`);
-            if (!response.ok) throw new Error(`Failed to load ${bankId}`);
-            const words = await response.json();
-            this.loadedBanks[bankId] = words;
-            return words;
-        } catch (e) {
-            console.error(`Error loading word bank ${bankId}:`, e);
-            return [];
-        }
+        return new Promise((resolve) => {
+            const script = document.createElement('script');
+            script.src = `data/${bankId}.js`;
+            script.onload = () => {
+                const words = window.WORDWISE_BANKS && window.WORDWISE_BANKS[bankId] ? window.WORDWISE_BANKS[bankId] : [];
+                this.loadedBanks[bankId] = words;
+                document.head.removeChild(script);
+                resolve(words);
+            };
+            script.onerror = () => {
+                console.error(`Error loading word bank ${bankId}`);
+                resolve([]);
+            };
+            document.head.appendChild(script);
+        });
     },
 
     async loadSelectedWords() {
@@ -132,16 +137,21 @@ const WordBank = {
 
 async function loadBankWithFallback(bankId, ctx) {
     if (ctx.loadedBanks[bankId]) return ctx.loadedBanks[bankId];
-    try {
-        const response = await fetch(`data/${bankId}.json`);
-        if (!response.ok) throw new Error(`Failed to load ${bankId}`);
-        const words = await response.json();
-        ctx.loadedBanks[bankId] = words;
-        return words;
-    } catch (e) {
-        console.error(`Error loading word bank ${bankId}:`, e);
-        return [];
-    }
+    return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = `data/${bankId}.js`;
+        script.onload = () => {
+            const words = window.WORDWISE_BANKS && window.WORDWISE_BANKS[bankId] ? window.WORDWISE_BANKS[bankId] : [];
+            ctx.loadedBanks[bankId] = words;
+            document.head.removeChild(script);
+            resolve(words);
+        };
+        script.onerror = () => {
+            console.error(`Error loading word bank ${bankId}`);
+            resolve([]);
+        };
+        document.head.appendChild(script);
+    });
 }
 
 function toggleBankSelection(bankId) {

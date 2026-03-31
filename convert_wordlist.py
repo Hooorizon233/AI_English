@@ -72,6 +72,14 @@ def main():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(words, f, ensure_ascii=False, indent=2)
 
+    js_output = OUTPUT_FILE.replace('.json', '.js')
+    bank_id = os.path.splitext(os.path.basename(OUTPUT_FILE))[0]
+    with open(js_output, 'w', encoding='utf-8') as f:
+        f.write("window.WORDWISE_BANKS = window.WORDWISE_BANKS || {};\n")
+        f.write(f"window.WORDWISE_BANKS['{bank_id}'] = ")
+        json.dump(words, f, ensure_ascii=False, separators=(',', ':'))
+        f.write(";\n")
+
     print(f"Done! Total kept: {len(words)}, skipped: {len(skipped)}")
     # 显示跳过的词
     for w, reason in skipped[:50]:

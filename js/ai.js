@@ -227,7 +227,11 @@ const AI = {
         const settings = this.getSettings();
         // Use custom prompt if set
         if (settings.customPrompt && settings.customPrompt.trim()) {
-            return settings.customPrompt.replace(/\{word\}/g, word);
+            let prompt = settings.customPrompt;
+            if (!prompt.includes('{word}')) {
+                prompt += `\n\n请分析这个单词: "${word}"`;
+            }
+            return prompt.replace(/\{word\}/g, word);
         }
 
         return `你是一位专业的英语词汇教学专家，擅长用多种创意方法帮助学生记忆英语单词。请针对单词 "${word}" 从以下角度提供详细的记忆辅助：
