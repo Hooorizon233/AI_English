@@ -1,0 +1,698 @@
+[
+  {
+    "word": "abolish",
+    "phonetic": "/əˈbɒlɪʃ/",
+    "translation": "v. 废除",
+    "example": "Slavery was abolished."
+  },
+  {
+    "word": "abstract",
+    "phonetic": "/ˈæbstrækt/",
+    "translation": "adj. 抽象的",
+    "example": "Abstract art is fascinating."
+  },
+  {
+    "word": "abundant",
+    "phonetic": "/əˈbʌndənt/",
+    "translation": "adj. 丰富的",
+    "example": "Abundant natural resources."
+  },
+  {
+    "word": "accessible",
+    "phonetic": "/əkˈsesəbl/",
+    "translation": "adj. 可访问的",
+    "example": "The building is wheelchair accessible."
+  },
+  {
+    "word": "accumulate",
+    "phonetic": "/əˈkjuːmjəleɪt/",
+    "translation": "v. 积累",
+    "example": "Debris accumulated over time."
+  },
+  {
+    "word": "adapt",
+    "phonetic": "/əˈdæpt/",
+    "translation": "v. 适应",
+    "example": "Animals adapt to their environment."
+  },
+  {
+    "word": "adjacent",
+    "phonetic": "/əˈdʒeɪsnt/",
+    "translation": "adj. 邻近的",
+    "example": "The adjacent room was empty."
+  },
+  {
+    "word": "advocate",
+    "phonetic": "/ˈædvəkeɪt/",
+    "translation": "v. 提倡",
+    "example": "She advocates environmental protection."
+  },
+  {
+    "word": "aggregate",
+    "phonetic": "/ˈæɡrɪɡeɪt/",
+    "translation": "n. 总量 v. 聚合",
+    "example": "The aggregate score determines the winner."
+  },
+  {
+    "word": "albeit",
+    "phonetic": "/ɔːlˈbiːɪt/",
+    "translation": "conj. 虽然",
+    "example": "He finished, albeit slowly."
+  },
+  {
+    "word": "allocate",
+    "phonetic": "/ˈæləkeɪt/",
+    "translation": "v. 分配",
+    "example": "Allocate resources efficiently."
+  },
+  {
+    "word": "alter",
+    "phonetic": "/ˈɔːltər/",
+    "translation": "v. 改变",
+    "example": "Humans have altered the landscape."
+  },
+  {
+    "word": "ambiguous",
+    "phonetic": "/æmˈbɪɡjuəs/",
+    "translation": "adj. 模棱两可的",
+    "example": "The results were ambiguous."
+  },
+  {
+    "word": "amend",
+    "phonetic": "/əˈmend/",
+    "translation": "v. 修改",
+    "example": "The constitution was amended."
+  },
+  {
+    "word": "analogous",
+    "phonetic": "/əˈnæləɡəs/",
+    "translation": "adj. 类似的",
+    "example": "The wing of a bird is analogous to a fin."
+  },
+  {
+    "word": "annual",
+    "phonetic": "/ˈænjuəl/",
+    "translation": "adj. 年度的",
+    "example": "The annual rainfall is low."
+  },
+  {
+    "word": "anticipate",
+    "phonetic": "/ænˈtɪsɪpeɪt/",
+    "translation": "v. 预期",
+    "example": "Scientists anticipate major discoveries."
+  },
+  {
+    "word": "apparent",
+    "phonetic": "/əˈpærənt/",
+    "translation": "adj. 明显的",
+    "example": "The change was immediately apparent."
+  },
+  {
+    "word": "arbitrary",
+    "phonetic": "/ˈɑːrbɪtrəri/",
+    "translation": "adj. 任意的",
+    "example": "The classification seems arbitrary."
+  },
+  {
+    "word": "asset",
+    "phonetic": "/ˈæset/",
+    "translation": "n. 资产",
+    "example": "Knowledge is a valuable asset."
+  },
+  {
+    "word": "attribute",
+    "phonetic": "/əˈtrɪbjuːt/",
+    "translation": "v. 归因于",
+    "example": "The painting is attributed to Picasso."
+  },
+  {
+    "word": "authentic",
+    "phonetic": "/ɔːˈθentɪk/",
+    "translation": "adj. 真实的",
+    "example": "An authentic cultural experience."
+  },
+  {
+    "word": "beneficial",
+    "phonetic": "/ˌbenɪˈfɪʃl/",
+    "translation": "adj. 有益的",
+    "example": "Exercise is beneficial to health."
+  },
+  {
+    "word": "bias",
+    "phonetic": "/ˈbaɪəs/",
+    "translation": "n. 偏见",
+    "example": "Avoid cultural bias in research."
+  },
+  {
+    "word": "bulk",
+    "phonetic": "/bʌlk/",
+    "translation": "n. 大部分 adj. 大量的",
+    "example": "The bulk of the work is done."
+  },
+  {
+    "word": "cease",
+    "phonetic": "/siːs/",
+    "translation": "v. 停止",
+    "example": "Hostilities have ceased."
+  },
+  {
+    "word": "chronic",
+    "phonetic": "/ˈkrɒnɪk/",
+    "translation": "adj. 慢性的",
+    "example": "Chronic diseases are on the rise."
+  },
+  {
+    "word": "cite",
+    "phonetic": "/saɪt/",
+    "translation": "v. 引用",
+    "example": "She cited three studies."
+  },
+  {
+    "word": "coincide",
+    "phonetic": "/ˌkəʊɪnˈsaɪd/",
+    "translation": "v. 同时发生",
+    "example": "The events coincided with the festival."
+  },
+  {
+    "word": "collaborate",
+    "phonetic": "/kəˈlæbəreɪt/",
+    "translation": "v. 合作",
+    "example": "Researchers collaborated across borders."
+  },
+  {
+    "word": "commence",
+    "phonetic": "/kəˈmens/",
+    "translation": "v. 开始",
+    "example": "Construction commenced in January."
+  },
+  {
+    "word": "compile",
+    "phonetic": "/kəmˈpaɪl/",
+    "translation": "v. 汇编",
+    "example": "Data was compiled from multiple sources."
+  },
+  {
+    "word": "complement",
+    "phonetic": "/ˈkɒmplɪment/",
+    "translation": "v. 补充",
+    "example": "The two theories complement each other."
+  },
+  {
+    "word": "comprehensive",
+    "phonetic": "/ˌkɒmprɪˈhensɪv/",
+    "translation": "adj. 全面的",
+    "example": "A comprehensive study was conducted."
+  },
+  {
+    "word": "comprise",
+    "phonetic": "/kəmˈpraɪz/",
+    "translation": "v. 包含",
+    "example": "Water comprises hydrogen and oxygen."
+  },
+  {
+    "word": "conceive",
+    "phonetic": "/kənˈsiːv/",
+    "translation": "v. 构想",
+    "example": "He conceived a new theory."
+  },
+  {
+    "word": "concurrent",
+    "phonetic": "/kənˈkʌrənt/",
+    "translation": "adj. 同时的",
+    "example": "Two concurrent events occurred."
+  },
+  {
+    "word": "confine",
+    "phonetic": "/kənˈfaɪn/",
+    "translation": "v. 限制",
+    "example": "The study was confined to urban areas."
+  },
+  {
+    "word": "conform",
+    "phonetic": "/kənˈfɔːrm/",
+    "translation": "v. 符合",
+    "example": "Products must conform to standards."
+  },
+  {
+    "word": "considerable",
+    "phonetic": "/kənˈsɪdərəbl/",
+    "translation": "adj. 相当大的",
+    "example": "Considerable progress has been made."
+  },
+  {
+    "word": "constitute",
+    "phonetic": "/ˈkɒnstɪtjuːt/",
+    "translation": "v. 构成",
+    "example": "Forests constitute a vital ecosystem."
+  },
+  {
+    "word": "constrain",
+    "phonetic": "/kənˈstreɪn/",
+    "translation": "v. 限制",
+    "example": "Resources constrain economic growth."
+  },
+  {
+    "word": "contemporary",
+    "phonetic": "/kənˈtempərəri/",
+    "translation": "adj. 当代的",
+    "example": "Contemporary literature reflects society."
+  },
+  {
+    "word": "context",
+    "phonetic": "/ˈkɒntekst/",
+    "translation": "n. 背景",
+    "example": "Consider the historical context."
+  },
+  {
+    "word": "contradict",
+    "phonetic": "/ˌkɒntrəˈdɪkt/",
+    "translation": "v. 矛盾",
+    "example": "The data contradicts the theory."
+  },
+  {
+    "word": "controversy",
+    "phonetic": "/ˈkɒntrəvɜːrsi/",
+    "translation": "n. 争议",
+    "example": "The topic sparked controversy."
+  },
+  {
+    "word": "convene",
+    "phonetic": "/kənˈviːn/",
+    "translation": "v. 召集",
+    "example": "A conference was convened."
+  },
+  {
+    "word": "convert",
+    "phonetic": "/kənˈvɜːrt/",
+    "translation": "v. 转换",
+    "example": "Convert solar energy into electricity."
+  },
+  {
+    "word": "convince",
+    "phonetic": "/kənˈvɪns/",
+    "translation": "v. 说服",
+    "example": "Evidence convinced the jury."
+  },
+  {
+    "word": "core",
+    "phonetic": "/kɔːr/",
+    "translation": "n. 核心",
+    "example": "The core of the argument."
+  },
+  {
+    "word": "correlate",
+    "phonetic": "/ˈkɒrəleɪt/",
+    "translation": "v. 相关",
+    "example": "Poverty correlates with poor health."
+  },
+  {
+    "word": "credible",
+    "phonetic": "/ˈkredɪbl/",
+    "translation": "adj. 可信的",
+    "example": "A credible source of information."
+  },
+  {
+    "word": "criterion",
+    "phonetic": "/kraɪˈtɪəriən/",
+    "translation": "n. 标准 (pl. criteria)",
+    "example": "The main criterion for selection."
+  },
+  {
+    "word": "crucial",
+    "phonetic": "/ˈkruːʃl/",
+    "translation": "adj. 至关重要的",
+    "example": "A crucial turning point."
+  },
+  {
+    "word": "culminate",
+    "phonetic": "/ˈkʌlmɪneɪt/",
+    "translation": "v. 达到顶点",
+    "example": "Efforts culminated in success."
+  },
+  {
+    "word": "curriculum",
+    "phonetic": "/kəˈrɪkjʊləm/",
+    "translation": "n. 课程",
+    "example": "The school curriculum was updated."
+  },
+  {
+    "word": "debate",
+    "phonetic": "/dɪˈbeɪt/",
+    "translation": "n./v. 辩论",
+    "example": "A heated debate ensued."
+  },
+  {
+    "word": "decade",
+    "phonetic": "/ˈdekeɪd/",
+    "translation": "n. 十年",
+    "example": "Progress over the past decade."
+  },
+  {
+    "word": "decline",
+    "phonetic": "/dɪˈklaɪn/",
+    "translation": "v. 下降",
+    "example": "Population has declined sharply."
+  },
+  {
+    "word": "deduce",
+    "phonetic": "/dɪˈdjuːs/",
+    "translation": "v. 推断",
+    "example": "We can deduce the answer."
+  },
+  {
+    "word": "deficient",
+    "phonetic": "/dɪˈfɪʃnt/",
+    "translation": "adj. 缺乏的",
+    "example": "A diet deficient in vitamins."
+  },
+  {
+    "word": "denote",
+    "phonetic": "/dɪˈnəʊt/",
+    "translation": "v. 表示",
+    "example": "The symbol denotes danger."
+  },
+  {
+    "word": "deplete",
+    "phonetic": "/dɪˈpliːt/",
+    "translation": "v. 耗尽",
+    "example": "The ozone layer has been depleted."
+  },
+  {
+    "word": "derive",
+    "phonetic": "/dɪˈraɪv/",
+    "translation": "v. 源自",
+    "example": "The word derives from Greek."
+  },
+  {
+    "word": "detect",
+    "phonetic": "/dɪˈtekt/",
+    "translation": "v. 发现",
+    "example": "The device detects radiation."
+  },
+  {
+    "word": "deteriorate",
+    "phonetic": "/dɪˈtɪəriəreɪt/",
+    "translation": "v. 恶化",
+    "example": "Air quality has deteriorated."
+  },
+  {
+    "word": "devise",
+    "phonetic": "/dɪˈvaɪz/",
+    "translation": "v. 设计",
+    "example": "They devised a new method."
+  },
+  {
+    "word": "differentiate",
+    "phonetic": "/ˌdɪfəˈrenʃieɪt/",
+    "translation": "v. 区分",
+    "example": "Differentiate between fact and opinion."
+  },
+  {
+    "word": "diffuse",
+    "phonetic": "/dɪˈfjuːz/",
+    "translation": "v. 扩散",
+    "example": "Light diffuses through the atmosphere."
+  },
+  {
+    "word": "dimension",
+    "phonetic": "/daɪˈmenʃn/",
+    "translation": "n. 维度",
+    "example": "A new dimension to the problem."
+  },
+  {
+    "word": "diminish",
+    "phonetic": "/dɪˈmɪnɪʃ/",
+    "translation": "v. 减少",
+    "example": "Enthusiasm diminished over time."
+  },
+  {
+    "word": "discrete",
+    "phonetic": "/dɪˈskriːt/",
+    "translation": "adj. 离散的",
+    "example": "The data falls into discrete categories."
+  },
+  {
+    "word": "displace",
+    "phonetic": "/dɪˈspleɪs/",
+    "translation": "v. 取代",
+    "example": "Machines displaced many workers."
+  },
+  {
+    "word": "distinct",
+    "phonetic": "/dɪˈstɪŋkt/",
+    "translation": "adj. 明显不同的",
+    "example": "Two distinct species were identified."
+  },
+  {
+    "word": "distort",
+    "phonetic": "/dɪˈstɔːrt/",
+    "translation": "v. 扭曲",
+    "example": "Heat can distort the metal."
+  },
+  {
+    "word": "diverse",
+    "phonetic": "/daɪˈvɜːrs/",
+    "translation": "adj. 多样的",
+    "example": "A diverse range of species."
+  },
+  {
+    "word": "domain",
+    "phonetic": "/dəˈmeɪn/",
+    "translation": "n. 领域",
+    "example": "The public domain."
+  },
+  {
+    "word": "domestic",
+    "phonetic": "/dəˈmestɪk/",
+    "translation": "adj. 国内的",
+    "example": "Domestic production increased."
+  },
+  {
+    "word": "dominant",
+    "phonetic": "/ˈdɒmɪnənt/",
+    "translation": "adj. 主要的",
+    "example": "The dominant species in the ecosystem."
+  },
+  {
+    "word": "dramatic",
+    "phonetic": "/drəˈmætɪk/",
+    "translation": "adj. 显著的",
+    "example": "A dramatic increase in temperature."
+  },
+  {
+    "word": "duration",
+    "phonetic": "/djʊˈreɪʃn/",
+    "translation": "n. 持续时间",
+    "example": "The duration of the experiment."
+  },
+  {
+    "word": "dynamic",
+    "phonetic": "/daɪˈnæmɪk/",
+    "translation": "adj. 动态的",
+    "example": "A dynamic ecosystem."
+  },
+  {
+    "word": "elaborate",
+    "phonetic": "/ɪˈlæbərət/",
+    "translation": "adj. 复杂的",
+    "example": "An elaborate mechanism."
+  },
+  {
+    "word": "element",
+    "phonetic": "/ˈelɪmənt/",
+    "translation": "n. 要素",
+    "example": "A key element of the theory."
+  },
+  {
+    "word": "eliminate",
+    "phonetic": "/ɪˈlɪmɪneɪt/",
+    "translation": "v. 消除",
+    "example": "Eliminate possible causes."
+  },
+  {
+    "word": "emerge",
+    "phonetic": "/ɪˈmɜːrdʒ/",
+    "translation": "v. 出现",
+    "example": "New species emerged over time."
+  },
+  {
+    "word": "empirical",
+    "phonetic": "/ɪmˈpɪrɪkl/",
+    "translation": "adj. 经验的",
+    "example": "Empirical evidence supports the claim."
+  },
+  {
+    "word": "enable",
+    "phonetic": "/ɪˈneɪbl/",
+    "translation": "v. 使可能",
+    "example": "Technology enables new discoveries."
+  },
+  {
+    "word": "encounter",
+    "phonetic": "/ɪnˈkaʊntər/",
+    "translation": "v. 遭遇",
+    "example": "Researchers encountered obstacles."
+  },
+  {
+    "word": "enhance",
+    "phonetic": "/ɪnˈhɑːns/",
+    "translation": "v. 提高",
+    "example": "Enhance the quality of education."
+  },
+  {
+    "word": "enormous",
+    "phonetic": "/ɪˈnɔːrməs/",
+    "translation": "adj. 巨大的",
+    "example": "An enormous amount of data."
+  },
+  {
+    "word": "entity",
+    "phonetic": "/ˈentɪti/",
+    "translation": "n. 实体",
+    "example": "A separate legal entity."
+  },
+  {
+    "word": "equate",
+    "phonetic": "/ɪˈkweɪt/",
+    "translation": "v. 等同",
+    "example": "Do not equate wealth with happiness."
+  },
+  {
+    "word": "erode",
+    "phonetic": "/ɪˈrəʊd/",
+    "translation": "v. 侵蚀",
+    "example": "Coastlines are being eroded."
+  },
+  {
+    "word": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "translation": "v. 建立",
+    "example": "Establish a clear framework."
+  },
+  {
+    "word": "estimate",
+    "phonetic": "/ˈestɪmeɪt/",
+    "translation": "v. 估计",
+    "example": "Scientists estimate the age at 4 billion years."
+  },
+  {
+    "word": "evaluate",
+    "phonetic": "/ɪˈvæljueɪt/",
+    "translation": "v. 评估",
+    "example": "Evaluate the effectiveness of the program."
+  },
+  {
+    "word": "evident",
+    "phonetic": "/ˈevɪdənt/",
+    "translation": "adj. 明显的",
+    "example": "The benefits are evident."
+  },
+  {
+    "word": "evolve",
+    "phonetic": "/ɪˈvɒlv/",
+    "translation": "v. 进化",
+    "example": "Species evolve through natural selection."
+  },
+  {
+    "word": "exceed",
+    "phonetic": "/ɪkˈsiːd/",
+    "translation": "v. 超过",
+    "example": "Temperatures exceeded 40 degrees."
+  },
+  {
+    "word": "exclude",
+    "phonetic": "/ɪkˈskluːd/",
+    "translation": "v. 排除",
+    "example": "Some factors were excluded from the study."
+  },
+  {
+    "word": "exhibit",
+    "phonetic": "/ɪɡˈzɪbɪt/",
+    "translation": "v. 展现",
+    "example": "Animals exhibit complex behavior."
+  },
+  {
+    "word": "explicit",
+    "phonetic": "/ɪkˈsplɪsɪt/",
+    "translation": "adj. 明确的",
+    "example": "The instructions were explicit."
+  },
+  {
+    "word": "exploit",
+    "phonetic": "/ɪkˈsplɔɪt/",
+    "translation": "v. 开发",
+    "example": "Exploit new energy sources."
+  },
+  {
+    "word": "expose",
+    "phonetic": "/ɪkˈspəʊz/",
+    "translation": "v. 暴露",
+    "example": "Plants exposed to sunlight."
+  },
+  {
+    "word": "extract",
+    "phonetic": "/ˈekstrækt/",
+    "translation": "v. 提取",
+    "example": "Extract minerals from the earth."
+  },
+  {
+    "word": "facilitate",
+    "phonetic": "/fəˈsɪlɪteɪt/",
+    "translation": "v. 促进",
+    "example": "Facilitate international cooperation."
+  },
+  {
+    "word": "fluctuate",
+    "phonetic": "/ˈflʌktʃueɪt/",
+    "translation": "v. 波动",
+    "example": "Sea levels fluctuate over time."
+  },
+  {
+    "word": "fossil",
+    "phonetic": "/ˈfɒsl/",
+    "translation": "n. 化石",
+    "example": "Fossil evidence supports the theory."
+  },
+  {
+    "word": "fragment",
+    "phonetic": "/ˈfræɡmənt/",
+    "translation": "n. 碎片",
+    "example": "Fragments of ancient pottery."
+  },
+  {
+    "word": "fundamental",
+    "phonetic": "/ˌfʌndəˈmentl/",
+    "translation": "adj. 根本的",
+    "example": "A fundamental principle of science."
+  },
+  {
+    "word": "generate",
+    "phonetic": "/ˈdʒenəreɪt/",
+    "translation": "v. 产生",
+    "example": "Generate electricity from wind."
+  },
+  {
+    "word": "habitat",
+    "phonetic": "/ˈhæbɪtæt/",
+    "translation": "n. 栖息地",
+    "example": "Habitat destruction threatens wildlife."
+  },
+  {
+    "word": "hence",
+    "phonetic": "/hens/",
+    "translation": "adv. 因此",
+    "example": "Hence the need for reform."
+  },
+  {
+    "word": "hierarchy",
+    "phonetic": "/ˈhaɪərɑːrki/",
+    "translation": "n. 等级",
+    "example": "A social hierarchy."
+  },
+  {
+    "word": "hypothetical",
+    "phonetic": "/ˌhaɪpəˈθetɪkl/",
+    "translation": "adj. 假设的",
+    "example": "A hypothetical scenario."
+  }
+]

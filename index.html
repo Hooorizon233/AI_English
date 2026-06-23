@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="AI 驱动的英语背单词应用，基于艾宾浩斯遗忘曲线，多角度辅助记忆">
+  <meta name="theme-color" content="#F2F2F7">
+  <title>WordWise — AI 背单词</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+
+<body>
+  <div class="app-container" id="app">
+
+    <!-- ===== Login Page ===== -->
+    <div class="page active" id="page-login">
+      <div class="login-container">
+        <div class="login-logo">📚</div>
+        <h1 class="login-title">WordWise</h1>
+        <p class="login-subtitle">AI 驱动 · 科学记忆</p>
+        <form class="login-form" id="login-form">
+          <div class="login-error" id="login-error"></div>
+          <div class="form-group">
+            <label class="form-label" for="login-username">用户名</label>
+            <input class="form-input" type="text" id="login-username" placeholder="请输入用户名" autocomplete="username"
+              required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-password">密码</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="password" id="login-password" placeholder="请输入密码"
+                autocomplete="current-password" required>
+              <button type="button" class="input-toggle" onclick="togglePassword('login-password', this)">显示</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="login-btn">登录</button>
+          <div class="login-footer">
+            还没有账号？<a id="show-register">立即注册</a>
+          </div>
+        </form>
+
+        <!-- Register form (hidden by default) -->
+        <form class="login-form hidden" id="register-form">
+          <div class="login-error" id="register-error"></div>
+          <div class="form-group">
+            <label class="form-label" for="reg-username">用户名</label>
+            <input class="form-input" type="text" id="reg-username" placeholder="请输入用户名 (3-20位)" autocomplete="username"
+              required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-password">密码</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="password" id="reg-password" placeholder="请输入密码 (6位以上)"
+                autocomplete="new-password" required>
+              <button type="button" class="input-toggle" onclick="togglePassword('reg-password', this)">显示</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-password2">确认密码</label>
+            <div class="input-wrapper">
+              <input class="form-input" type="password" id="reg-password2" placeholder="请再次输入密码"
+                autocomplete="new-password" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">注册</button>
+          <div class="login-footer">
+            已有账号？<a id="show-login">返回登录</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== Home Page ===== -->
+    <div class="page" id="page-home">
+      <h1 class="page-title">首页</h1>
+      <p class="page-subtitle" id="home-greeting">开始今天的学习吧</p>
+
+      <!-- Streak -->
+      <div class="text-center mb-16">
+        <span class="streak-badge" id="streak-badge">🔥 连续 0 天</span>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-learned">0</div>
+          <div class="stat-label">已学单词</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-review">0</div>
+          <div class="stat-label">待复习</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-mastered">0</div>
+          <div class="stat-label">已掌握</div>
+        </div>
+      </div>
+
+      <!-- Today's progress -->
+      <div class="card mb-16">
+        <div class="flex justify-between items-center mb-8">
+          <span style="font-weight:600;">今日进度</span>
+          <span class="text-secondary" style="font-size:var(--font-size-sm);" id="today-progress-text">0 / 20</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="today-progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <button class="btn btn-primary btn-block btn-lg mb-16" id="start-study-btn" onclick="startStudy()">
+        📖 开始学习
+      </button>
+
+      <button class="btn btn-secondary btn-block" id="start-review-btn" onclick="startReview()">
+        🔄 复习单词 <span id="review-count-badge"></span>
+      </button>
+
+      <button class="btn btn-block mt-16" id="pregenerate-btn" onclick="startBatchPreGenerate()"
+        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+        🚀 预热 AI 内容
+      </button>
+    </div>
+
+    <!-- ===== Study Page ===== -->
+    <div class="page" id="page-study">
+      <div class="flex justify-between items-center mb-8">
+        <button class="btn btn-sm btn-secondary" onclick="exitStudy()">← 返回</button>
+        <span class="text-secondary" style="font-size:var(--font-size-sm);" id="study-progress">1 / 20</span>
+      </div>
+      <div class="progress-bar mb-8">
+        <div class="progress-fill" id="study-progress-bar" style="width:0%"></div>
+      </div>
+
+      <!-- Study card -->
+      <div class="study-card-container">
+        <div class="study-card" id="study-card" onclick="flipCard()">
+          <div class="study-card-front">
+            <div class="study-word" id="study-word">word</div>
+            <div class="study-phonetic" id="study-phonetic">/wɜːrd/</div>
+            <div class="study-tap-hint">点击卡片查看释义</div>
+          </div>
+          <div class="study-card-back">
+            <div class="study-word" id="study-word-back" style="font-size:var(--font-size-xl);">word</div>
+            <div class="study-phonetic" id="study-phonetic-back">/wɜːrd/</div>
+            <div class="study-translation" id="study-translation">n. 单词</div>
+            <div class="study-example" id="study-example">This is an example sentence.</div>
+            <!-- AI content area -->
+            <div id="ai-area"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 1: Initial choice (3 buttons) -->
+      <div class="study-actions study-actions-3" id="study-actions">
+        <button class="btn btn-danger" onclick="markWord('unknown')">😕 不认识</button>
+        <button class="btn btn-warning" onclick="markWord('fuzzy')">🤔 模糊</button>
+        <button class="btn btn-success" onclick="markWord('known')">😊 认识</button>
+      </div>
+
+      <!-- Phase 2: Confirm (2 buttons, initially hidden) -->
+      <div class="study-confirm-actions" id="study-confirm-actions" style="display:none;">
+        <button class="btn btn-danger" onclick="confirmMark(false)">❌ 记错了</button>
+        <button class="btn btn-success" onclick="confirmMark(true)">✅ 记对了</button>
+      </div>
+
+      <!-- AI button -->
+      <button class="btn btn-secondary btn-block mt-16" id="ai-assist-btn" onclick="getAIAssist()">
+        ✨ AI 辅助记忆
+      </button>
+    </div>
+
+    <!-- ===== Word Bank Page ===== -->
+    <div class="page" id="page-wordbank">
+      <h1 class="page-title">词库</h1>
+      <p class="page-subtitle">选择你要学习的词库</p>
+      <div id="wordbank-list"></div>
+      <button class="btn btn-primary btn-block btn-lg mt-24" onclick="saveWordBankSelection()">保存选择</button>
+    </div>
+
+    <!-- ===== Notebook Page ===== -->
+    <div class="page" id="page-notebook">
+      <h1 class="page-title">单词本</h1>
+      <p class="page-subtitle">查看已学单词与 AI 注解</p>
+      <!-- Filter tabs -->
+      <div class="notebook-filters">
+        <button class="notebook-filter active" data-filter="all" onclick="filterNotebook('all', this)">全部</button>
+        <button class="notebook-filter" data-filter="learning" onclick="filterNotebook('learning', this)">学习中</button>
+        <button class="notebook-filter" data-filter="mastered" onclick="filterNotebook('mastered', this)">已掌握</button>
+      </div>
+      <!-- Search -->
+      <div style="margin-bottom:12px;">
+        <input class="form-input" type="text" id="notebook-search" placeholder="搜索单词..."
+          oninput="searchNotebook(this.value)">
+      </div>
+      <!-- Word list -->
+      <div id="notebook-list"></div>
+      <div id="notebook-empty" class="empty-state" style="display:none;">
+        <div class="empty-state-icon">📖</div>
+        <div class="empty-state-title">还没有学过的单词</div>
+        <div class="empty-state-desc">去首页开始学习吧！</div>
+      </div>
+    </div>
+
+    <!-- ===== Settings Page ===== -->
+    <div class="page" id="page-settings">
+      <h1 class="page-title">设置</h1>
+      <p class="page-subtitle">个性化你的学习体验</p>
+
+      <!-- AI API Settings -->
+      <div class="section-title">AI 设置</div>
+      <div class="card-group">
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#007AFF;">🤖</div>
+            <span class="settings-item-label">AI 平台</span>
+          </div>
+          <select class="form-select" id="ai-provider" style="width:160px;" onchange="onProviderChange()">
+            <option value="siliconflow">硅基流动 (推荐)</option>
+            <option value="gemini">Google Gemini</option>
+            <option value="openai">OpenAI</option>
+            <option value="qwen">通义千问</option>
+            <option value="doubao">豆包</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="moonshot">Moonshot</option>
+            <option value="zhipu">智谱 GLM</option>
+            <option value="custom">自定义</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF9500;">🔑</div>
+            <span class="settings-item-label">API 密钥</span>
+          </div>
+        </div>
+        <div style="padding: 0 16px 14px;">
+          <div class="input-wrapper">
+            <input class="form-input" type="password" id="api-key-input" placeholder="输入你的 API Key">
+            <button type="button" class="input-toggle" onclick="togglePassword('api-key-input', this)">显示</button>
+          </div>
+        </div>
+        <div class="settings-item" id="custom-url-section" style="display:none;">
+          <div class="settings-item-left" style="flex-direction:column;align-items:flex-start;gap:8px;width:100%;">
+            <span class="settings-item-label">API 端点</span>
+            <input class="form-input" type="url" id="custom-api-url"
+              placeholder="https://api.example.com/v1/chat/completions">
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#5AC8FA;">📦</div>
+            <span class="settings-item-label">模型选择</span>
+          </div>
+        </div>
+        <div style="padding: 0 16px 14px;">
+          <select class="form-select" id="model-name-select" style="width:100%; margin-bottom:8px;"
+            onchange="onModelSelectChange()">
+          </select>
+          <input class="form-input" type="text" id="model-name-input" placeholder="输入自定义模型名称" style="display:none;">
+        </div>
+        <div style="padding: 8px 16px 14px; display:flex; gap:10px;">
+          <button class="btn btn-primary btn-sm" onclick="testAPIConnection()">测试连接</button>
+          <button class="btn btn-secondary btn-sm" onclick="saveAPISettings()">保存设置</button>
+        </div>
+      </div>
+
+      <!-- Token usage -->
+      <div class="section-title">用量统计</div>
+      <div class="card-group">
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#34C759;">📊</div>
+            <span class="settings-item-label">Token 消耗</span>
+          </div>
+          <span class="settings-item-value" id="token-usage">0</span>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#AF52DE;">🔢</div>
+            <span class="settings-item-label">API 调用次数</span>
+          </div>
+          <span class="settings-item-value" id="api-call-count">0</span>
+        </div>
+      </div>
+
+      <!-- AI Cache -->
+      <div class="section-title">AI 缓存</div>
+      <div class="card-group">
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#667eea;">⚡</div>
+            <span class="settings-item-label">已缓存单词数</span>
+          </div>
+          <span class="settings-item-value" id="cache-count">0</span>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#5AC8FA;">💾</div>
+            <span class="settings-item-label">缓存大小</span>
+          </div>
+          <span class="settings-item-value" id="cache-size">0 KB</span>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF9500;">🔢</div>
+            <span class="settings-item-label">预热数量</span>
+          </div>
+          <select class="form-select" id="preheat-count" style="width:100px;" onchange="savePreheatCount()">
+            <option value="20">20 词</option>
+            <option value="50">50 词</option>
+            <option value="100">100 词</option>
+            <option value="200">200 词</option>
+            <option value="500">500 词</option>
+          </select>
+        </div>
+        <div style="padding: 8px 16px 14px; display:flex; gap:10px;">
+          <button class="btn btn-sm" onclick="startBatchPreGenerate()"
+            style="background: linear-gradient(135deg, #667eea, #764ba2); color:white; border:none;">🚀 批量预热</button>
+          <button class="btn btn-secondary btn-sm"
+            onclick="if(confirm('确定清除所有 AI 缓存？')) { AI.clearCache(); updateUsageDisplay(); showToast('缓存已清除'); }">🗑️
+            清除缓存</button>
+        </div>
+      </div>
+
+      <!-- Custom Prompt -->
+      <div class="section-title">自定义提示词</div>
+      <div class="card-group">
+        <div style="padding:14px 16px;">
+          <p class="text-secondary" style="font-size:12px; margin-bottom:8px;">自定义 AI 辅助记忆的提示词。用 <code>{word}</code>
+            代表单词。留空则使用默认提示词。</p>
+          <textarea class="form-input" id="custom-prompt-input" rows="6"
+            style="resize:vertical; font-size:13px; line-height:1.5;" placeholder="留空使用默认提示词..."></textarea>
+          <div style="display:flex; gap:10px; margin-top:10px;">
+            <button class="btn btn-primary btn-sm" onclick="saveCustomPrompt()">保存提示词</button>
+            <button class="btn btn-secondary btn-sm" onclick="resetCustomPrompt()">恢复默认</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Study Settings -->
+      <div class="section-title">学习设置</div>
+      <div class="card-group">
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF9500;">📝</div>
+            <span class="settings-item-label">每日新词</span>
+          </div>
+          <select class="form-select" id="daily-new-words" style="width:80px;" onchange="saveDailyWords()">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#007AFF;">🔄</div>
+            <span class="settings-item-label">学会需要连续认识</span>
+          </div>
+          <select class="form-select" id="required-correct-count" style="width:80px;" onchange="saveLearningSettings()">
+            <option value="1">1 次</option>
+            <option value="2" selected>2 次</option>
+            <option value="3">3 次</option>
+            <option value="4">4 次</option>
+            <option value="5">5 次</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#5856D6;">🔃</div>
+            <span class="settings-item-label">词库排序方式</span>
+          </div>
+          <select class="form-select" id="sort-mode-select" style="width:110px;" onchange="saveLearningSettings()">
+            <option value="frequency" selected>词频优先</option>
+            <option value="random">完全乱序</option>
+            <option value="alphabetical">字母顺序</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF6B35;">📋</div>
+            <span class="settings-item-label">每次复习</span>
+          </div>
+          <select class="form-select" id="review-batch-size" style="width:100px;" onchange="saveReviewBatchSize()">
+            <option value="20">20 词</option>
+            <option value="50">50 词</option>
+            <option value="100" selected>100 词</option>
+            <option value="200">200 词</option>
+            <option value="500">500 词</option>
+            <option value="99999">全部</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#1C1C1E;">🌙</div>
+            <span class="settings-item-label">深色模式</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Account Security -->
+      <div class="section-title">账户安全</div>
+      <div class="card-group">
+        <div class="settings-item card-group-item" onclick="showChangePasswordModal()">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF9500;">🔒</div>
+            <span class="settings-item-label">修改密码</span>
+          </div>
+          <span class="settings-item-value">›</span>
+        </div>
+        <div class="settings-item card-group-item" onclick="exportData()">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#007AFF;">💾</div>
+            <span class="settings-item-label">导出数据</span>
+          </div>
+          <span class="settings-item-value">›</span>
+        </div>
+        <div class="settings-item card-group-item" onclick="document.getElementById('import-file').click()">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#34C759;">📂</div>
+            <span class="settings-item-label">导入数据</span>
+          </div>
+          <span class="settings-item-value">›</span>
+        </div>
+        <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
+        <div class="settings-item card-group-item" onclick="clearAllData()">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF3B30;">🗑️</div>
+            <span class="settings-item-label" style="color:var(--danger);">清除所有数据</span>
+          </div>
+          <span class="settings-item-value">›</span>
+        </div>
+      </div>
+
+      <!-- Logout -->
+      <button class="btn btn-secondary btn-block mt-24" onclick="logout()">退出登录</button>
+
+      <div class="text-center mt-16 text-secondary" style="font-size:var(--font-size-xs);">
+        WordWise v4.0 · AI 驱动 · 科学记忆 · 服务端存储
+      </div>
+    </div>
+
+    <!-- Admin Page -->
+    <div class="page" id="page-admin">
+      <h1 class="page-title">后台管理</h1>
+      <p class="page-subtitle">管理系统配置与用户数据</p>
+
+      <div class="section-title">复习设置</div>
+      <div class="card-group">
+        <div class="settings-item">
+          <div class="settings-item-left">
+            <div class="settings-item-icon" style="background:#FF6B35;">📋</div>
+            <span class="settings-item-label">默认每次复习数量</span>
+          </div>
+          <select class="form-select" id="admin-review-batch" style="width:110px;" onchange="saveAdminReviewBatch()">
+            <option value="20">20 词</option>
+            <option value="50">50 词</option>
+            <option value="100" selected>100 词</option>
+            <option value="200">200 词</option>
+            <option value="500">500 词</option>
+            <option value="99999">全部</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-title">用户管理</div>
+      <div class="card-group" id="admin-users-list">
+        <div class="settings-item">
+          <span class="text-secondary">加载中...</span>
+        </div>
+      </div>
+
+      <div class="section-title">系统信息</div>
+      <div class="card-group" id="admin-system-stats">
+        <div class="settings-item">
+          <span class="text-secondary">加载中...</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="nav-bar hidden" id="nav-bar">
+    <button class="nav-item active" data-page="home" onclick="navigateTo('home')">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3l9-8z" />
+      </svg>
+      <span>首页</span>
+    </button>
+    <button class="nav-item" data-page="wordbank" onclick="navigateTo('wordbank')">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+      </svg>
+      <span>词库</span>
+    </button>
+    <button class="nav-item" data-page="notebook" onclick="navigateTo('notebook')">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z" />
+      </svg>
+      <span>单词本</span>
+    </button>
+    <button class="nav-item" data-page="settings" onclick="navigateTo('settings')">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.06-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.3-.06.63-.06.94s.02.64.06.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1112 8.4a3.6 3.6 0 010 7.2z" />
+      </svg>
+      <span>设置</span>
+    </button>
+    <button class="nav-item" data-page="admin" id="nav-admin" style="display:none;" onclick="navigateTo('admin')">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </svg>
+      <span>管理</span>
+    </button>
+  </nav>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/wordbank.js"></script>
+  <script src="js/study.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/notebook.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1400 @@
+[
+  {
+    "word": "abandon",
+    "phonetic": "/əˈbændən/",
+    "translation": "v. 放弃；抛弃",
+    "example": "He abandoned his car in the snow."
+  },
+  {
+    "word": "ability",
+    "phonetic": "/əˈbɪlɪti/",
+    "translation": "n. 能力；才能",
+    "example": "She has the ability to solve complex problems."
+  },
+  {
+    "word": "abroad",
+    "phonetic": "/əˈbrɔːd/",
+    "translation": "adv. 在国外",
+    "example": "She wants to study abroad next year."
+  },
+  {
+    "word": "absent",
+    "phonetic": "/ˈæbsənt/",
+    "translation": "adj. 缺席的",
+    "example": "He was absent from the meeting."
+  },
+  {
+    "word": "absolute",
+    "phonetic": "/ˈæbsəluːt/",
+    "translation": "adj. 绝对的；完全的",
+    "example": "I have absolute confidence in you."
+  },
+  {
+    "word": "absorb",
+    "phonetic": "/əbˈzɔːrb/",
+    "translation": "v. 吸收；使专心",
+    "example": "Plants absorb carbon dioxide."
+  },
+  {
+    "word": "abstract",
+    "phonetic": "/ˈæbstrækt/",
+    "translation": "adj. 抽象的 n. 摘要",
+    "example": "The concept is too abstract for children."
+  },
+  {
+    "word": "abundant",
+    "phonetic": "/əˈbʌndənt/",
+    "translation": "adj. 丰富的；充裕的",
+    "example": "The region is abundant in natural resources."
+  },
+  {
+    "word": "academic",
+    "phonetic": "/ˌækəˈdemɪk/",
+    "translation": "adj. 学术的",
+    "example": "Her academic performance is outstanding."
+  },
+  {
+    "word": "accelerate",
+    "phonetic": "/əkˈseləreɪt/",
+    "translation": "v. 加速；促进",
+    "example": "The car accelerated rapidly."
+  },
+  {
+    "word": "accept",
+    "phonetic": "/əkˈsept/",
+    "translation": "v. 接受；承认",
+    "example": "She accepted the job offer."
+  },
+  {
+    "word": "access",
+    "phonetic": "/ˈækses/",
+    "translation": "n. 通道；使用权 v. 访问",
+    "example": "Students have access to the library."
+  },
+  {
+    "word": "accommodate",
+    "phonetic": "/əˈkɒmədeɪt/",
+    "translation": "v. 容纳；适应",
+    "example": "The hotel can accommodate 500 guests."
+  },
+  {
+    "word": "accompany",
+    "phonetic": "/əˈkʌmpəni/",
+    "translation": "v. 陪伴；伴随",
+    "example": "She accompanied her friend to the hospital."
+  },
+  {
+    "word": "accomplish",
+    "phonetic": "/əˈkɒmplɪʃ/",
+    "translation": "v. 完成；实现",
+    "example": "We accomplished our goal ahead of schedule."
+  },
+  {
+    "word": "accurate",
+    "phonetic": "/ˈækjərət/",
+    "translation": "adj. 准确的；精确的",
+    "example": "The data must be accurate."
+  },
+  {
+    "word": "achieve",
+    "phonetic": "/əˈtʃiːv/",
+    "translation": "v. 实现；达到",
+    "example": "She achieved her dream of becoming a doctor."
+  },
+  {
+    "word": "acknowledge",
+    "phonetic": "/əkˈnɒlɪdʒ/",
+    "translation": "v. 承认；感谢",
+    "example": "He acknowledged his mistake."
+  },
+  {
+    "word": "acquire",
+    "phonetic": "/əˈkwaɪər/",
+    "translation": "v. 获得；学到",
+    "example": "She acquired a new skill."
+  },
+  {
+    "word": "adapt",
+    "phonetic": "/əˈdæpt/",
+    "translation": "v. 适应；改编",
+    "example": "You need to adapt to the new environment."
+  },
+  {
+    "word": "adequate",
+    "phonetic": "/ˈædɪkwət/",
+    "translation": "adj. 足够的",
+    "example": "The food supply is adequate for now."
+  },
+  {
+    "word": "adjust",
+    "phonetic": "/əˈdʒʌst/",
+    "translation": "v. 调整；适应",
+    "example": "Please adjust the volume."
+  },
+  {
+    "word": "administration",
+    "phonetic": "/ədˌmɪnɪˈstreɪʃn/",
+    "translation": "n. 管理；行政",
+    "example": "The administration announced new policies."
+  },
+  {
+    "word": "admire",
+    "phonetic": "/ədˈmaɪər/",
+    "translation": "v. 钦佩；赞美",
+    "example": "I admire her courage."
+  },
+  {
+    "word": "adopt",
+    "phonetic": "/əˈdɒpt/",
+    "translation": "v. 采用；收养",
+    "example": "They decided to adopt a child."
+  },
+  {
+    "word": "advance",
+    "phonetic": "/ədˈvɑːns/",
+    "translation": "v. 前进 n. 进步",
+    "example": "Technology continues to advance rapidly."
+  },
+  {
+    "word": "advantage",
+    "phonetic": "/ədˈvɑːntɪdʒ/",
+    "translation": "n. 优势；好处",
+    "example": "This gives us a competitive advantage."
+  },
+  {
+    "word": "affair",
+    "phonetic": "/əˈfeər/",
+    "translation": "n. 事务；事件",
+    "example": "Foreign affairs are complex."
+  },
+  {
+    "word": "affect",
+    "phonetic": "/əˈfekt/",
+    "translation": "v. 影响；感动",
+    "example": "The weather can affect your mood."
+  },
+  {
+    "word": "afford",
+    "phonetic": "/əˈfɔːrd/",
+    "translation": "v. 负担得起",
+    "example": "I cannot afford a new car."
+  },
+  {
+    "word": "aggressive",
+    "phonetic": "/əˈɡresɪv/",
+    "translation": "adj. 侵略的；好斗的",
+    "example": "He became aggressive when angry."
+  },
+  {
+    "word": "alter",
+    "phonetic": "/ˈɔːltər/",
+    "translation": "v. 改变；变更",
+    "example": "We need to alter our plans."
+  },
+  {
+    "word": "alternative",
+    "phonetic": "/ɔːlˈtɜːrnətɪv/",
+    "translation": "n. 替代方案 adj. 替代的",
+    "example": "We need an alternative solution."
+  },
+  {
+    "word": "ambitious",
+    "phonetic": "/æmˈbɪʃəs/",
+    "translation": "adj. 有野心的",
+    "example": "She is an ambitious young woman."
+  },
+  {
+    "word": "analyze",
+    "phonetic": "/ˈænəlaɪz/",
+    "translation": "v. 分析",
+    "example": "We need to analyze the data carefully."
+  },
+  {
+    "word": "annual",
+    "phonetic": "/ˈænjuəl/",
+    "translation": "adj. 年度的",
+    "example": "The annual report was published."
+  },
+  {
+    "word": "anxiety",
+    "phonetic": "/æŋˈzaɪəti/",
+    "translation": "n. 焦虑；不安",
+    "example": "She suffers from anxiety."
+  },
+  {
+    "word": "apparent",
+    "phonetic": "/əˈpærənt/",
+    "translation": "adj. 明显的",
+    "example": "The answer was apparent to everyone."
+  },
+  {
+    "word": "appeal",
+    "phonetic": "/əˈpiːl/",
+    "translation": "v. 呼吁；吸引",
+    "example": "The idea appealed to many people."
+  },
+  {
+    "word": "application",
+    "phonetic": "/ˌæplɪˈkeɪʃn/",
+    "translation": "n. 应用；申请",
+    "example": "She submitted her job application."
+  },
+  {
+    "word": "appreciate",
+    "phonetic": "/əˈpriːʃieɪt/",
+    "translation": "v. 感激；欣赏",
+    "example": "I really appreciate your help."
+  },
+  {
+    "word": "approach",
+    "phonetic": "/əˈprəʊtʃ/",
+    "translation": "v. 接近 n. 方法",
+    "example": "We need a new approach to this problem."
+  },
+  {
+    "word": "appropriate",
+    "phonetic": "/əˈprəʊpriət/",
+    "translation": "adj. 适当的",
+    "example": "Wear appropriate clothing."
+  },
+  {
+    "word": "approve",
+    "phonetic": "/əˈpruːv/",
+    "translation": "v. 批准；赞成",
+    "example": "The board approved the proposal."
+  },
+  {
+    "word": "argue",
+    "phonetic": "/ˈɑːrɡjuː/",
+    "translation": "v. 争论；辩论",
+    "example": "They argued about politics."
+  },
+  {
+    "word": "arise",
+    "phonetic": "/əˈraɪz/",
+    "translation": "v. 出现；产生",
+    "example": "Problems arise from poor communication."
+  },
+  {
+    "word": "arrange",
+    "phonetic": "/əˈreɪndʒ/",
+    "translation": "v. 安排；整理",
+    "example": "Let me arrange a meeting for us."
+  },
+  {
+    "word": "artificial",
+    "phonetic": "/ˌɑːrtɪˈfɪʃl/",
+    "translation": "adj. 人工的",
+    "example": "Artificial intelligence is transforming the world."
+  },
+  {
+    "word": "aspect",
+    "phonetic": "/ˈæspekt/",
+    "translation": "n. 方面；层面",
+    "example": "Consider every aspect of the problem."
+  },
+  {
+    "word": "assess",
+    "phonetic": "/əˈses/",
+    "translation": "v. 评估；评定",
+    "example": "Teachers assess student performance regularly."
+  },
+  {
+    "word": "assign",
+    "phonetic": "/əˈsaɪn/",
+    "translation": "v. 分配；指派",
+    "example": "The teacher assigned homework."
+  },
+  {
+    "word": "assume",
+    "phonetic": "/əˈsjuːm/",
+    "translation": "v. 假设；承担",
+    "example": "I assumed you knew about it."
+  },
+  {
+    "word": "assure",
+    "phonetic": "/əˈʃʊər/",
+    "translation": "v. 保证",
+    "example": "I assure you everything will be fine."
+  },
+  {
+    "word": "atmosphere",
+    "phonetic": "/ˈætməsfɪər/",
+    "translation": "n. 大气；气氛",
+    "example": "The restaurant has a romantic atmosphere."
+  },
+  {
+    "word": "attach",
+    "phonetic": "/əˈtætʃ/",
+    "translation": "v. 附上；贴上",
+    "example": "Please attach your resume to the email."
+  },
+  {
+    "word": "attempt",
+    "phonetic": "/əˈtempt/",
+    "translation": "v./n. 尝试",
+    "example": "She attempted to climb the mountain."
+  },
+  {
+    "word": "attitude",
+    "phonetic": "/ˈætɪtjuːd/",
+    "translation": "n. 态度；看法",
+    "example": "A positive attitude makes a difference."
+  },
+  {
+    "word": "attract",
+    "phonetic": "/əˈtrækt/",
+    "translation": "v. 吸引",
+    "example": "The event attracted a large crowd."
+  },
+  {
+    "word": "authority",
+    "phonetic": "/ɔːˈθɒrɪti/",
+    "translation": "n. 权威；当局",
+    "example": "The authorities are investigating."
+  },
+  {
+    "word": "available",
+    "phonetic": "/əˈveɪləbl/",
+    "translation": "adj. 可用的",
+    "example": "Is this room available tomorrow?"
+  },
+  {
+    "word": "avoid",
+    "phonetic": "/əˈvɔɪd/",
+    "translation": "v. 避免",
+    "example": "Try to avoid making the same mistake."
+  },
+  {
+    "word": "award",
+    "phonetic": "/əˈwɔːrd/",
+    "translation": "n. 奖品 v. 授予",
+    "example": "She won the award for best actress."
+  },
+  {
+    "word": "aware",
+    "phonetic": "/əˈweər/",
+    "translation": "adj. 意识到的",
+    "example": "Are you aware of the risks?"
+  },
+  {
+    "word": "balance",
+    "phonetic": "/ˈbæləns/",
+    "translation": "n./v. 平衡",
+    "example": "Balance work and life."
+  },
+  {
+    "word": "ban",
+    "phonetic": "/bæn/",
+    "translation": "v. 禁止 n. 禁令",
+    "example": "Smoking is banned in public places."
+  },
+  {
+    "word": "barrier",
+    "phonetic": "/ˈbæriər/",
+    "translation": "n. 障碍",
+    "example": "Language can be a barrier."
+  },
+  {
+    "word": "basis",
+    "phonetic": "/ˈbeɪsɪs/",
+    "translation": "n. 基础",
+    "example": "We meet on a regular basis."
+  },
+  {
+    "word": "behalf",
+    "phonetic": "/bɪˈhɑːf/",
+    "translation": "n. 代表",
+    "example": "On behalf of the team, thank you."
+  },
+  {
+    "word": "benefit",
+    "phonetic": "/ˈbenɪfɪt/",
+    "translation": "n. 好处 v. 有益于",
+    "example": "Exercise has many health benefits."
+  },
+  {
+    "word": "blame",
+    "phonetic": "/bleɪm/",
+    "translation": "v. 责备 n. 责任",
+    "example": "Do not blame yourself."
+  },
+  {
+    "word": "boost",
+    "phonetic": "/buːst/",
+    "translation": "v. 促进 n. 推动",
+    "example": "The news boosted consumer confidence."
+  },
+  {
+    "word": "boundary",
+    "phonetic": "/ˈbaʊndri/",
+    "translation": "n. 边界",
+    "example": "We need clear boundaries."
+  },
+  {
+    "word": "brief",
+    "phonetic": "/briːf/",
+    "translation": "adj. 简短的",
+    "example": "Give me a brief summary."
+  },
+  {
+    "word": "budget",
+    "phonetic": "/ˈbʌdʒɪt/",
+    "translation": "n. 预算",
+    "example": "Stay within our budget."
+  },
+  {
+    "word": "burden",
+    "phonetic": "/ˈbɜːrdn/",
+    "translation": "n. 负担",
+    "example": "The tax burden is heavy."
+  },
+  {
+    "word": "campaign",
+    "phonetic": "/kæmˈpeɪn/",
+    "translation": "n. 运动；活动",
+    "example": "The advertising campaign was successful."
+  },
+  {
+    "word": "candidate",
+    "phonetic": "/ˈkændɪdeɪt/",
+    "translation": "n. 候选人",
+    "example": "She is a strong candidate."
+  },
+  {
+    "word": "capable",
+    "phonetic": "/ˈkeɪpəbl/",
+    "translation": "adj. 有能力的",
+    "example": "She is capable of leading the team."
+  },
+  {
+    "word": "capture",
+    "phonetic": "/ˈkæptʃər/",
+    "translation": "v. 捕获；吸引",
+    "example": "The photo captured a beautiful moment."
+  },
+  {
+    "word": "career",
+    "phonetic": "/kəˈrɪər/",
+    "translation": "n. 职业；生涯",
+    "example": "She has a successful career."
+  },
+  {
+    "word": "category",
+    "phonetic": "/ˈkætəɡɔːri/",
+    "translation": "n. 类别",
+    "example": "Products are divided into categories."
+  },
+  {
+    "word": "cease",
+    "phonetic": "/siːs/",
+    "translation": "v. 停止",
+    "example": "The fighting ceased at midnight."
+  },
+  {
+    "word": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "translation": "n./v. 挑战",
+    "example": "Learning a language is a challenge."
+  },
+  {
+    "word": "characteristic",
+    "phonetic": "/ˌkærəktəˈrɪstɪk/",
+    "translation": "n. 特征",
+    "example": "Patience is one of her characteristics."
+  },
+  {
+    "word": "circumstance",
+    "phonetic": "/ˈsɜːrkəmstæns/",
+    "translation": "n. 情况",
+    "example": "Under the circumstances, we had no choice."
+  },
+  {
+    "word": "claim",
+    "phonetic": "/kleɪm/",
+    "translation": "v. 声称 n. 要求",
+    "example": "He claims to be an expert."
+  },
+  {
+    "word": "climate",
+    "phonetic": "/ˈklaɪmət/",
+    "translation": "n. 气候",
+    "example": "The climate is changing rapidly."
+  },
+  {
+    "word": "collapse",
+    "phonetic": "/kəˈlæps/",
+    "translation": "v. 倒塌；崩溃",
+    "example": "The building collapsed."
+  },
+  {
+    "word": "comment",
+    "phonetic": "/ˈkɒment/",
+    "translation": "n./v. 评论",
+    "example": "Do you have any comments?"
+  },
+  {
+    "word": "commit",
+    "phonetic": "/kəˈmɪt/",
+    "translation": "v. 犯罪；承诺",
+    "example": "He committed himself to the project."
+  },
+  {
+    "word": "communicate",
+    "phonetic": "/kəˈmjuːnɪkeɪt/",
+    "translation": "v. 交流",
+    "example": "Communicate effectively."
+  },
+  {
+    "word": "community",
+    "phonetic": "/kəˈmjuːnɪti/",
+    "translation": "n. 社区",
+    "example": "The local community organized a fundraiser."
+  },
+  {
+    "word": "compare",
+    "phonetic": "/kəmˈpeər/",
+    "translation": "v. 比较",
+    "example": "Compare these two products."
+  },
+  {
+    "word": "compensate",
+    "phonetic": "/ˈkɒmpenseɪt/",
+    "translation": "v. 补偿",
+    "example": "The company compensated the victims."
+  },
+  {
+    "word": "compete",
+    "phonetic": "/kəmˈpiːt/",
+    "translation": "v. 竞争",
+    "example": "Companies compete for customers."
+  },
+  {
+    "word": "complain",
+    "phonetic": "/kəmˈpleɪn/",
+    "translation": "v. 抱怨",
+    "example": "Customers complained about the service."
+  },
+  {
+    "word": "complex",
+    "phonetic": "/ˈkɒmpleks/",
+    "translation": "adj. 复杂的",
+    "example": "The issue is complex."
+  },
+  {
+    "word": "component",
+    "phonetic": "/kəmˈpəʊnənt/",
+    "translation": "n. 组成部分",
+    "example": "Each component plays a vital role."
+  },
+  {
+    "word": "comprehensive",
+    "phonetic": "/ˌkɒmprɪˈhensɪv/",
+    "translation": "adj. 全面的",
+    "example": "We need a comprehensive plan."
+  },
+  {
+    "word": "concentrate",
+    "phonetic": "/ˈkɒnsntreɪt/",
+    "translation": "v. 集中；专心",
+    "example": "I need to concentrate on my work."
+  },
+  {
+    "word": "concept",
+    "phonetic": "/ˈkɒnsept/",
+    "translation": "n. 概念",
+    "example": "The concept is easy to understand."
+  },
+  {
+    "word": "concern",
+    "phonetic": "/kənˈsɜːrn/",
+    "translation": "v. 涉及 n. 关心",
+    "example": "This matter concerns all of us."
+  },
+  {
+    "word": "conclude",
+    "phonetic": "/kənˈkluːd/",
+    "translation": "v. 结束；得出结论",
+    "example": "We concluded the plan was feasible."
+  },
+  {
+    "word": "conduct",
+    "phonetic": "/kənˈdʌkt/",
+    "translation": "v. 进行 n. 行为",
+    "example": "They conducted an investigation."
+  },
+  {
+    "word": "confidence",
+    "phonetic": "/ˈkɒnfɪdəns/",
+    "translation": "n. 信心",
+    "example": "She spoke with great confidence."
+  },
+  {
+    "word": "confirm",
+    "phonetic": "/kənˈfɜːrm/",
+    "translation": "v. 确认",
+    "example": "Can you confirm the reservation?"
+  },
+  {
+    "word": "conflict",
+    "phonetic": "/ˈkɒnflɪkt/",
+    "translation": "n. 冲突",
+    "example": "There is a conflict between them."
+  },
+  {
+    "word": "confuse",
+    "phonetic": "/kənˈfjuːz/",
+    "translation": "v. 使困惑",
+    "example": "The instructions confused me."
+  },
+  {
+    "word": "conscious",
+    "phonetic": "/ˈkɒnʃəs/",
+    "translation": "adj. 意识到的",
+    "example": "She was conscious of being watched."
+  },
+  {
+    "word": "consequence",
+    "phonetic": "/ˈkɒnsɪkwəns/",
+    "translation": "n. 结果；后果",
+    "example": "You must face the consequences."
+  },
+  {
+    "word": "considerable",
+    "phonetic": "/kənˈsɪdərəbl/",
+    "translation": "adj. 相当大的",
+    "example": "A considerable amount of time."
+  },
+  {
+    "word": "consist",
+    "phonetic": "/kənˈsɪst/",
+    "translation": "v. 由…组成",
+    "example": "The team consists of five members."
+  },
+  {
+    "word": "constant",
+    "phonetic": "/ˈkɒnstənt/",
+    "translation": "adj. 持续的",
+    "example": "There has been constant rain."
+  },
+  {
+    "word": "construct",
+    "phonetic": "/kənˈstrʌkt/",
+    "translation": "v. 建造",
+    "example": "They constructed a new bridge."
+  },
+  {
+    "word": "consume",
+    "phonetic": "/kənˈsjuːm/",
+    "translation": "v. 消耗；消费",
+    "example": "Americans consume a lot of energy."
+  },
+  {
+    "word": "contact",
+    "phonetic": "/ˈkɒntækt/",
+    "translation": "v./n. 联系",
+    "example": "Please contact us if you have questions."
+  },
+  {
+    "word": "contain",
+    "phonetic": "/kənˈteɪn/",
+    "translation": "v. 包含",
+    "example": "This box contains all my books."
+  },
+  {
+    "word": "contemporary",
+    "phonetic": "/kənˈtempərəri/",
+    "translation": "adj. 当代的",
+    "example": "Contemporary art can be hard to understand."
+  },
+  {
+    "word": "content",
+    "phonetic": "/ˈkɒntent/",
+    "translation": "n. 内容 adj. 满足的",
+    "example": "The content of the book is fascinating."
+  },
+  {
+    "word": "context",
+    "phonetic": "/ˈkɒntekst/",
+    "translation": "n. 背景；上下文",
+    "example": "Understand the context."
+  },
+  {
+    "word": "contract",
+    "phonetic": "/ˈkɒntrækt/",
+    "translation": "n. 合同",
+    "example": "She signed a two-year contract."
+  },
+  {
+    "word": "contribute",
+    "phonetic": "/kənˈtrɪbjuːt/",
+    "translation": "v. 贡献",
+    "example": "Everyone should contribute to society."
+  },
+  {
+    "word": "controversial",
+    "phonetic": "/ˌkɒntrəˈvɜːʃl/",
+    "translation": "adj. 有争议的",
+    "example": "The decision was controversial."
+  },
+  {
+    "word": "convenient",
+    "phonetic": "/kənˈviːniənt/",
+    "translation": "adj. 方便的",
+    "example": "Is this time convenient for you?"
+  },
+  {
+    "word": "convince",
+    "phonetic": "/kənˈvɪns/",
+    "translation": "v. 说服",
+    "example": "She convinced me to try again."
+  },
+  {
+    "word": "cooperate",
+    "phonetic": "/kəʊˈɒpəreɪt/",
+    "translation": "v. 合作",
+    "example": "Both teams need to cooperate."
+  },
+  {
+    "word": "cope",
+    "phonetic": "/kəʊp/",
+    "translation": "v. 应对",
+    "example": "She coped well with the pressure."
+  },
+  {
+    "word": "create",
+    "phonetic": "/kriˈeɪt/",
+    "translation": "v. 创造",
+    "example": "She created a beautiful painting."
+  },
+  {
+    "word": "crisis",
+    "phonetic": "/ˈkraɪsɪs/",
+    "translation": "n. 危机",
+    "example": "The country faces an economic crisis."
+  },
+  {
+    "word": "critical",
+    "phonetic": "/ˈkrɪtɪkl/",
+    "translation": "adj. 关键的；批评的",
+    "example": "This is a critical moment."
+  },
+  {
+    "word": "crucial",
+    "phonetic": "/ˈkruːʃl/",
+    "translation": "adj. 至关重要的",
+    "example": "Education is crucial for success."
+  },
+  {
+    "word": "curious",
+    "phonetic": "/ˈkjʊriəs/",
+    "translation": "adj. 好奇的",
+    "example": "Children are naturally curious."
+  },
+  {
+    "word": "current",
+    "phonetic": "/ˈkʌrənt/",
+    "translation": "adj. 当前的 n. 潮流",
+    "example": "The current situation is complex."
+  },
+  {
+    "word": "debate",
+    "phonetic": "/dɪˈbeɪt/",
+    "translation": "n./v. 辩论",
+    "example": "The debate lasted for hours."
+  },
+  {
+    "word": "decline",
+    "phonetic": "/dɪˈklaɪn/",
+    "translation": "v. 下降；拒绝",
+    "example": "Sales have declined sharply."
+  },
+  {
+    "word": "define",
+    "phonetic": "/dɪˈfaɪn/",
+    "translation": "v. 定义",
+    "example": "How do you define success?"
+  },
+  {
+    "word": "demonstrate",
+    "phonetic": "/ˈdemənstreɪt/",
+    "translation": "v. 证明；演示",
+    "example": "The experiment demonstrated the theory."
+  },
+  {
+    "word": "deny",
+    "phonetic": "/dɪˈnaɪ/",
+    "translation": "v. 否认",
+    "example": "She denied the accusation."
+  },
+  {
+    "word": "depend",
+    "phonetic": "/dɪˈpend/",
+    "translation": "v. 依靠",
+    "example": "Success depends on hard work."
+  },
+  {
+    "word": "derive",
+    "phonetic": "/dɪˈraɪv/",
+    "translation": "v. 得到；源自",
+    "example": "The word derives from Latin."
+  },
+  {
+    "word": "describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "translation": "v. 描述",
+    "example": "Can you describe what happened?"
+  },
+  {
+    "word": "deserve",
+    "phonetic": "/dɪˈzɜːrv/",
+    "translation": "v. 值得",
+    "example": "You deserve a promotion."
+  },
+  {
+    "word": "design",
+    "phonetic": "/dɪˈzaɪn/",
+    "translation": "v./n. 设计",
+    "example": "She designed the company logo."
+  },
+  {
+    "word": "despite",
+    "phonetic": "/dɪˈspaɪt/",
+    "translation": "prep. 尽管",
+    "example": "Despite the rain, they went hiking."
+  },
+  {
+    "word": "determine",
+    "phonetic": "/dɪˈtɜːrmɪn/",
+    "translation": "v. 决定；确定",
+    "example": "We need to determine the cause."
+  },
+  {
+    "word": "develop",
+    "phonetic": "/dɪˈveləp/",
+    "translation": "v. 发展",
+    "example": "The city has developed rapidly."
+  },
+  {
+    "word": "device",
+    "phonetic": "/dɪˈvaɪs/",
+    "translation": "n. 设备",
+    "example": "This device measures temperature."
+  },
+  {
+    "word": "devote",
+    "phonetic": "/dɪˈvəʊt/",
+    "translation": "v. 致力于",
+    "example": "She devoted her life to science."
+  },
+  {
+    "word": "discipline",
+    "phonetic": "/ˈdɪsɪplɪn/",
+    "translation": "n. 纪律 v. 训练",
+    "example": "Self-discipline is key to success."
+  },
+  {
+    "word": "display",
+    "phonetic": "/dɪˈspleɪ/",
+    "translation": "v. 展示 n. 展览",
+    "example": "The museum displays ancient artifacts."
+  },
+  {
+    "word": "distinguish",
+    "phonetic": "/dɪˈstɪŋɡwɪʃ/",
+    "translation": "v. 区分",
+    "example": "Can you distinguish between the two?"
+  },
+  {
+    "word": "distribute",
+    "phonetic": "/dɪˈstrɪbjuːt/",
+    "translation": "v. 分发",
+    "example": "The company distributes goods nationwide."
+  },
+  {
+    "word": "diverse",
+    "phonetic": "/daɪˈvɜːrs/",
+    "translation": "adj. 多样的",
+    "example": "Our team is culturally diverse."
+  },
+  {
+    "word": "document",
+    "phonetic": "/ˈdɒkjʊmənt/",
+    "translation": "n. 文件 v. 记录",
+    "example": "Submit the required documents."
+  },
+  {
+    "word": "domestic",
+    "phonetic": "/dəˈmestɪk/",
+    "translation": "adj. 国内的",
+    "example": "Domestic flights are cheaper."
+  },
+  {
+    "word": "dominant",
+    "phonetic": "/ˈdɒmɪnənt/",
+    "translation": "adj. 主要的",
+    "example": "English is the dominant language."
+  },
+  {
+    "word": "dramatic",
+    "phonetic": "/drəˈmætɪk/",
+    "translation": "adj. 戏剧性的",
+    "example": "There was a dramatic improvement."
+  },
+  {
+    "word": "dynamic",
+    "phonetic": "/daɪˈnæmɪk/",
+    "translation": "adj. 动态的",
+    "example": "She has a dynamic personality."
+  },
+  {
+    "word": "economy",
+    "phonetic": "/ɪˈkɒnəmi/",
+    "translation": "n. 经济",
+    "example": "The economy is growing steadily."
+  },
+  {
+    "word": "efficient",
+    "phonetic": "/ɪˈfɪʃnt/",
+    "translation": "adj. 高效的",
+    "example": "We need a more efficient system."
+  },
+  {
+    "word": "eliminate",
+    "phonetic": "/ɪˈlɪmɪneɪt/",
+    "translation": "v. 消除",
+    "example": "We must eliminate waste."
+  },
+  {
+    "word": "emerge",
+    "phonetic": "/ɪˈmɜːrdʒ/",
+    "translation": "v. 出现",
+    "example": "New problems emerged."
+  },
+  {
+    "word": "emotion",
+    "phonetic": "/ɪˈməʊʃn/",
+    "translation": "n. 情感",
+    "example": "She was overwhelmed with emotion."
+  },
+  {
+    "word": "emphasis",
+    "phonetic": "/ˈemfəsɪs/",
+    "translation": "n. 重点",
+    "example": "The emphasis is on quality."
+  },
+  {
+    "word": "enable",
+    "phonetic": "/ɪˈneɪbl/",
+    "translation": "v. 使能够",
+    "example": "Technology enables remote work."
+  },
+  {
+    "word": "encounter",
+    "phonetic": "/ɪnˈkaʊntər/",
+    "translation": "v. 遭遇",
+    "example": "I encountered many difficulties."
+  },
+  {
+    "word": "encourage",
+    "phonetic": "/ɪnˈkʌrɪdʒ/",
+    "translation": "v. 鼓励",
+    "example": "Teachers should encourage students."
+  },
+  {
+    "word": "enhance",
+    "phonetic": "/ɪnˈhɑːns/",
+    "translation": "v. 提高",
+    "example": "This software enhances productivity."
+  },
+  {
+    "word": "enormous",
+    "phonetic": "/ɪˈnɔːrməs/",
+    "translation": "adj. 巨大的",
+    "example": "The task requires enormous effort."
+  },
+  {
+    "word": "ensure",
+    "phonetic": "/ɪnˈʃʊər/",
+    "translation": "v. 确保",
+    "example": "Please ensure all doors are locked."
+  },
+  {
+    "word": "environment",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "translation": "n. 环境",
+    "example": "We must protect the environment."
+  },
+  {
+    "word": "equivalent",
+    "phonetic": "/ɪˈkwɪvələnt/",
+    "translation": "adj. 等价的",
+    "example": "One mile is equivalent to 1.6 km."
+  },
+  {
+    "word": "essential",
+    "phonetic": "/ɪˈsenʃl/",
+    "translation": "adj. 基本的",
+    "example": "Water is essential for life."
+  },
+  {
+    "word": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "translation": "v. 建立",
+    "example": "The company was established in 1990."
+  },
+  {
+    "word": "estimate",
+    "phonetic": "/ˈestɪmeɪt/",
+    "translation": "v./n. 估计",
+    "example": "We estimate the cost at 500 dollars."
+  },
+  {
+    "word": "evaluate",
+    "phonetic": "/ɪˈvæljueɪt/",
+    "translation": "v. 评估",
+    "example": "We need to evaluate the results."
+  },
+  {
+    "word": "evidence",
+    "phonetic": "/ˈevɪdəns/",
+    "translation": "n. 证据",
+    "example": "There is no evidence of wrongdoing."
+  },
+  {
+    "word": "evolve",
+    "phonetic": "/ɪˈvɒlv/",
+    "translation": "v. 进化；发展",
+    "example": "Languages evolve over time."
+  },
+  {
+    "word": "exceed",
+    "phonetic": "/ɪkˈsiːd/",
+    "translation": "v. 超过",
+    "example": "The costs exceeded our budget."
+  },
+  {
+    "word": "exchange",
+    "phonetic": "/ɪksˈtʃeɪndʒ/",
+    "translation": "v./n. 交换",
+    "example": "They exchanged gifts at Christmas."
+  },
+  {
+    "word": "exclude",
+    "phonetic": "/ɪkˈskluːd/",
+    "translation": "v. 排除",
+    "example": "The price excludes tax."
+  },
+  {
+    "word": "expand",
+    "phonetic": "/ɪkˈspænd/",
+    "translation": "v. 扩大",
+    "example": "The company plans to expand overseas."
+  },
+  {
+    "word": "expect",
+    "phonetic": "/ɪkˈspekt/",
+    "translation": "v. 期望",
+    "example": "I expect you to be on time."
+  },
+  {
+    "word": "expense",
+    "phonetic": "/ɪkˈspens/",
+    "translation": "n. 费用",
+    "example": "Travel expenses will be reimbursed."
+  },
+  {
+    "word": "experiment",
+    "phonetic": "/ɪkˈsperɪmənt/",
+    "translation": "n./v. 实验",
+    "example": "The experiment yielded surprising results."
+  },
+  {
+    "word": "expert",
+    "phonetic": "/ˈekspɜːrt/",
+    "translation": "n. 专家",
+    "example": "She is an expert in AI."
+  },
+  {
+    "word": "explore",
+    "phonetic": "/ɪkˈsplɔːr/",
+    "translation": "v. 探索",
+    "example": "They explored the ancient ruins."
+  },
+  {
+    "word": "expose",
+    "phonetic": "/ɪkˈspəʊz/",
+    "translation": "v. 暴露",
+    "example": "The investigation exposed the truth."
+  },
+  {
+    "word": "extend",
+    "phonetic": "/ɪkˈstend/",
+    "translation": "v. 延伸",
+    "example": "Can you extend the deadline?"
+  },
+  {
+    "word": "extent",
+    "phonetic": "/ɪkˈstent/",
+    "translation": "n. 程度",
+    "example": "To what extent do you agree?"
+  },
+  {
+    "word": "external",
+    "phonetic": "/ɪkˈstɜːrnl/",
+    "translation": "adj. 外部的",
+    "example": "External factors affect the outcome."
+  },
+  {
+    "word": "extraordinary",
+    "phonetic": "/ɪkˈstrɔːrdnri/",
+    "translation": "adj. 非凡的",
+    "example": "She has extraordinary talent."
+  },
+  {
+    "word": "extreme",
+    "phonetic": "/ɪkˈstriːm/",
+    "translation": "adj. 极端的",
+    "example": "Extreme weather is more common."
+  },
+  {
+    "word": "facility",
+    "phonetic": "/fəˈsɪlɪti/",
+    "translation": "n. 设施",
+    "example": "The hotel has excellent facilities."
+  },
+  {
+    "word": "factor",
+    "phonetic": "/ˈfæktər/",
+    "translation": "n. 因素",
+    "example": "Cost is an important factor."
+  },
+  {
+    "word": "feature",
+    "phonetic": "/ˈfiːtʃər/",
+    "translation": "n. 特征 v. 以…为特色",
+    "example": "This phone has many new features."
+  },
+  {
+    "word": "flexible",
+    "phonetic": "/ˈfleksɪbl/",
+    "translation": "adj. 灵活的",
+    "example": "We need a flexible schedule."
+  },
+  {
+    "word": "focus",
+    "phonetic": "/ˈfəʊkəs/",
+    "translation": "v. 集中 n. 焦点",
+    "example": "Focus on what is important."
+  },
+  {
+    "word": "former",
+    "phonetic": "/ˈfɔːrmər/",
+    "translation": "adj. 以前的",
+    "example": "The former president attended."
+  },
+  {
+    "word": "foundation",
+    "phonetic": "/faʊnˈdeɪʃn/",
+    "translation": "n. 基础",
+    "example": "Education is the foundation of society."
+  },
+  {
+    "word": "framework",
+    "phonetic": "/ˈfreɪmwɜːrk/",
+    "translation": "n. 框架",
+    "example": "We need a new legal framework."
+  },
+  {
+    "word": "frequency",
+    "phonetic": "/ˈfriːkwənsi/",
+    "translation": "n. 频率",
+    "example": "The frequency of earthquakes increased."
+  },
+  {
+    "word": "frustrate",
+    "phonetic": "/frʌˈstreɪt/",
+    "translation": "v. 使沮丧",
+    "example": "The delay frustrated everyone."
+  },
+  {
+    "word": "fulfill",
+    "phonetic": "/fʊlˈfɪl/",
+    "translation": "v. 实现",
+    "example": "She fulfilled her childhood dream."
+  },
+  {
+    "word": "function",
+    "phonetic": "/ˈfʌŋkʃn/",
+    "translation": "n. 功能 v. 运作",
+    "example": "What is the function of this button?"
+  },
+  {
+    "word": "fundamental",
+    "phonetic": "/ˌfʌndəˈmentl/",
+    "translation": "adj. 基本的",
+    "example": "This is a fundamental principle."
+  },
+  {
+    "word": "generate",
+    "phonetic": "/ˈdʒenəreɪt/",
+    "translation": "v. 产生",
+    "example": "The plan generated a lot of interest."
+  },
+  {
+    "word": "genuine",
+    "phonetic": "/ˈdʒenjuɪn/",
+    "translation": "adj. 真正的",
+    "example": "She showed genuine concern."
+  },
+  {
+    "word": "global",
+    "phonetic": "/ˈɡləʊbl/",
+    "translation": "adj. 全球的",
+    "example": "Climate change is a global issue."
+  },
+  {
+    "word": "guarantee",
+    "phonetic": "/ˌɡærənˈtiː/",
+    "translation": "v./n. 保证",
+    "example": "We guarantee product quality."
+  },
+  {
+    "word": "highlight",
+    "phonetic": "/ˈhaɪlaɪt/",
+    "translation": "v. 强调 n. 亮点",
+    "example": "The report highlights several problems."
+  },
+  {
+    "word": "hypothesis",
+    "phonetic": "/haɪˈpɒθəsɪs/",
+    "translation": "n. 假设",
+    "example": "The hypothesis needs to be tested."
+  },
+  {
+    "word": "identify",
+    "phonetic": "/aɪˈdentɪfaɪ/",
+    "translation": "v. 识别",
+    "example": "Can you identify the suspect?"
+  },
+  {
+    "word": "illustrate",
+    "phonetic": "/ˈɪləstreɪt/",
+    "translation": "v. 说明",
+    "example": "The graph illustrates the trend."
+  },
+  {
+    "word": "image",
+    "phonetic": "/ˈɪmɪdʒ/",
+    "translation": "n. 形象；图像",
+    "example": "The company improved its image."
+  },
+  {
+    "word": "immediate",
+    "phonetic": "/ɪˈmiːdiət/",
+    "translation": "adj. 立即的",
+    "example": "We need an immediate response."
+  },
+  {
+    "word": "impact",
+    "phonetic": "/ˈɪmpækt/",
+    "translation": "n./v. 影响",
+    "example": "Technology has a huge impact on education."
+  },
+  {
+    "word": "implement",
+    "phonetic": "/ˈɪmplɪment/",
+    "translation": "v. 实施",
+    "example": "Implement the changes next month."
+  },
+  {
+    "word": "imply",
+    "phonetic": "/ɪmˈplaɪ/",
+    "translation": "v. 暗示",
+    "example": "What are you implying?"
+  },
+  {
+    "word": "impose",
+    "phonetic": "/ɪmˈpəʊz/",
+    "translation": "v. 施加",
+    "example": "The government imposed new regulations."
+  },
+  {
+    "word": "impression",
+    "phonetic": "/ɪmˈpreʃn/",
+    "translation": "n. 印象",
+    "example": "She made a good first impression."
+  },
+  {
+    "word": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "translation": "v. 改善",
+    "example": "We need to improve our service."
+  },
+  {
+    "word": "indicate",
+    "phonetic": "/ˈɪndɪkeɪt/",
+    "translation": "v. 表明",
+    "example": "The data indicates a positive trend."
+  },
+  {
+    "word": "individual",
+    "phonetic": "/ˌɪndɪˈvɪdʒuəl/",
+    "translation": "adj. 个人的 n. 个人",
+    "example": "Every individual has rights."
+  },
+  {
+    "word": "inevitable",
+    "phonetic": "/ɪnˈevɪtəbl/",
+    "translation": "adj. 不可避免的",
+    "example": "Change is inevitable."
+  },
+  {
+    "word": "influence",
+    "phonetic": "/ˈɪnfluəns/",
+    "translation": "n./v. 影响",
+    "example": "Parents influence children greatly."
+  },
+  {
+    "word": "initial",
+    "phonetic": "/ɪˈnɪʃl/",
+    "translation": "adj. 最初的",
+    "example": "My initial reaction was surprise."
+  },
+  {
+    "word": "innovate",
+    "phonetic": "/ˈɪnəveɪt/",
+    "translation": "v. 创新",
+    "example": "Companies must innovate to survive."
+  },
+  {
+    "word": "insight",
+    "phonetic": "/ˈɪnsaɪt/",
+    "translation": "n. 洞察力",
+    "example": "The book provides valuable insights."
+  },
+  {
+    "word": "inspire",
+    "phonetic": "/ɪnˈspaɪər/",
+    "translation": "v. 鼓舞",
+    "example": "Her speech inspired many people."
+  },
+  {
+    "word": "instance",
+    "phonetic": "/ˈɪnstəns/",
+    "translation": "n. 实例",
+    "example": "For instance, consider this example."
+  },
+  {
+    "word": "institution",
+    "phonetic": "/ˌɪnstɪˈtjuːʃn/",
+    "translation": "n. 机构",
+    "example": "The institution was founded in 1850."
+  },
+  {
+    "word": "instrument",
+    "phonetic": "/ˈɪnstrʊmənt/",
+    "translation": "n. 工具；乐器",
+    "example": "She plays several instruments."
+  }
+]

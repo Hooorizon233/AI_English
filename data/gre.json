@@ -1,0 +1,866 @@
+[
+  {
+    "word": "aberrant",
+    "phonetic": "/æˈberənt/",
+    "translation": "adj. 异常的",
+    "example": "Aberrant behavior was noted."
+  },
+  {
+    "word": "abscond",
+    "phonetic": "/əbˈskɒnd/",
+    "translation": "v. 潜逃",
+    "example": "He absconded with the money."
+  },
+  {
+    "word": "abstain",
+    "phonetic": "/əbˈsteɪn/",
+    "translation": "v. 戒；弃权",
+    "example": "She abstained from alcohol."
+  },
+  {
+    "word": "accolade",
+    "phonetic": "/ˈækəleɪd/",
+    "translation": "n. 荣誉",
+    "example": "The film received many accolades."
+  },
+  {
+    "word": "acquiesce",
+    "phonetic": "/ˌækwiˈes/",
+    "translation": "v. 默许",
+    "example": "She acquiesced to his demands."
+  },
+  {
+    "word": "acrimony",
+    "phonetic": "/ˈækrɪməni/",
+    "translation": "n. 尖刻",
+    "example": "The debate was full of acrimony."
+  },
+  {
+    "word": "admonish",
+    "phonetic": "/ədˈmɒnɪʃ/",
+    "translation": "v. 训诫",
+    "example": "She admonished her son."
+  },
+  {
+    "word": "adulterate",
+    "phonetic": "/əˈdʌltəreɪt/",
+    "translation": "v. 掺假",
+    "example": "The food was adulterated."
+  },
+  {
+    "word": "aesthetic",
+    "phonetic": "/iːsˈθetɪk/",
+    "translation": "adj. 审美的",
+    "example": "Aesthetic appreciation of art."
+  },
+  {
+    "word": "affable",
+    "phonetic": "/ˈæfəbl/",
+    "translation": "adj. 和蔼的",
+    "example": "An affable host greeted us."
+  },
+  {
+    "word": "aggrandize",
+    "phonetic": "/əˈɡrændaɪz/",
+    "translation": "v. 增大；夸大",
+    "example": "He tried to aggrandize his role."
+  },
+  {
+    "word": "alacrity",
+    "phonetic": "/əˈlækrɪti/",
+    "translation": "n. 敏捷；乐意",
+    "example": "She accepted with alacrity."
+  },
+  {
+    "word": "amalgamate",
+    "phonetic": "/əˈmælɡəmeɪt/",
+    "translation": "v. 合并",
+    "example": "The two companies amalgamated."
+  },
+  {
+    "word": "ambivalent",
+    "phonetic": "/æmˈbɪvələnt/",
+    "translation": "adj. 矛盾的",
+    "example": "She felt ambivalent about the offer."
+  },
+  {
+    "word": "ameliorate",
+    "phonetic": "/əˈmiːliəreɪt/",
+    "translation": "v. 改善",
+    "example": "Steps to ameliorate the situation."
+  },
+  {
+    "word": "anachronism",
+    "phonetic": "/əˈnækrənɪzəm/",
+    "translation": "n. 时代错误",
+    "example": "The old law is an anachronism."
+  },
+  {
+    "word": "anathema",
+    "phonetic": "/əˈnæθəmə/",
+    "translation": "n. 令人厌恶的事",
+    "example": "Racism is anathema to her."
+  },
+  {
+    "word": "anomaly",
+    "phonetic": "/əˈnɒməli/",
+    "translation": "n. 异常",
+    "example": "A statistical anomaly was detected."
+  },
+  {
+    "word": "antipathy",
+    "phonetic": "/ænˈtɪpəθi/",
+    "translation": "n. 厌恶",
+    "example": "She felt antipathy toward him."
+  },
+  {
+    "word": "apathy",
+    "phonetic": "/ˈæpəθi/",
+    "translation": "n. 冷漠",
+    "example": "Voter apathy is concerning."
+  },
+  {
+    "word": "appease",
+    "phonetic": "/əˈpiːz/",
+    "translation": "v. 安抚",
+    "example": "Nothing could appease the angry mob."
+  },
+  {
+    "word": "apprehension",
+    "phonetic": "/ˌæprɪˈhenʃn/",
+    "translation": "n. 忧虑；逮捕",
+    "example": "She felt apprehension about the test."
+  },
+  {
+    "word": "arduous",
+    "phonetic": "/ˈɑːrdjuəs/",
+    "translation": "adj. 艰难的",
+    "example": "An arduous journey through the mountains."
+  },
+  {
+    "word": "articulate",
+    "phonetic": "/ɑːrˈtɪkjʊleɪt/",
+    "translation": "adj. 表达清晰的",
+    "example": "An articulate speaker."
+  },
+  {
+    "word": "ascetic",
+    "phonetic": "/əˈsetɪk/",
+    "translation": "adj. 苦行的",
+    "example": "He led an ascetic life."
+  },
+  {
+    "word": "assiduous",
+    "phonetic": "/əˈsɪdjuəs/",
+    "translation": "adj. 勤勉的",
+    "example": "Assiduous efforts paid off."
+  },
+  {
+    "word": "assuage",
+    "phonetic": "/əˈsweɪdʒ/",
+    "translation": "v. 缓和",
+    "example": "Nothing could assuage her grief."
+  },
+  {
+    "word": "astute",
+    "phonetic": "/əˈstjuːt/",
+    "translation": "adj. 精明的",
+    "example": "An astute businesswoman."
+  },
+  {
+    "word": "audacious",
+    "phonetic": "/ɔːˈdeɪʃəs/",
+    "translation": "adj. 大胆的",
+    "example": "An audacious plan."
+  },
+  {
+    "word": "austere",
+    "phonetic": "/ɒˈstɪər/",
+    "translation": "adj. 严峻的",
+    "example": "An austere lifestyle."
+  },
+  {
+    "word": "avarice",
+    "phonetic": "/ˈævərɪs/",
+    "translation": "n. 贪婪",
+    "example": "Driven by avarice."
+  },
+  {
+    "word": "baroque",
+    "phonetic": "/bəˈrɒk/",
+    "translation": "adj. 巴洛克式的",
+    "example": "A baroque cathedral."
+  },
+  {
+    "word": "belligerent",
+    "phonetic": "/bəˈlɪdʒərənt/",
+    "translation": "adj. 好斗的",
+    "example": "A belligerent attitude."
+  },
+  {
+    "word": "benevolent",
+    "phonetic": "/bəˈnevələnt/",
+    "translation": "adj. 仁慈的",
+    "example": "A benevolent ruler."
+  },
+  {
+    "word": "blithe",
+    "phonetic": "/blaɪð/",
+    "translation": "adj. 无忧无虑的",
+    "example": "Blithe disregard for the rules."
+  },
+  {
+    "word": "bombastic",
+    "phonetic": "/bɒmˈbæstɪk/",
+    "translation": "adj. 夸大的",
+    "example": "A bombastic speech."
+  },
+  {
+    "word": "burgeon",
+    "phonetic": "/ˈbɜːrdʒən/",
+    "translation": "v. 迅速发展",
+    "example": "The industry has burgeoned."
+  },
+  {
+    "word": "cacophony",
+    "phonetic": "/kəˈkɒfəni/",
+    "translation": "n. 刺耳的声音",
+    "example": "A cacophony of car horns."
+  },
+  {
+    "word": "candid",
+    "phonetic": "/ˈkændɪd/",
+    "translation": "adj. 坦率的",
+    "example": "A candid assessment."
+  },
+  {
+    "word": "capricious",
+    "phonetic": "/kəˈprɪʃəs/",
+    "translation": "adj. 反复无常的",
+    "example": "Capricious weather patterns."
+  },
+  {
+    "word": "castigate",
+    "phonetic": "/ˈkæstɪɡeɪt/",
+    "translation": "v. 严厉批评",
+    "example": "She castigated him for his laziness."
+  },
+  {
+    "word": "caustic",
+    "phonetic": "/ˈkɔːstɪk/",
+    "translation": "adj. 腐蚀性的；尖刻的",
+    "example": "A caustic remark."
+  },
+  {
+    "word": "cerebral",
+    "phonetic": "/ˈserɪbrəl/",
+    "translation": "adj. 理智的",
+    "example": "A cerebral approach to the problem."
+  },
+  {
+    "word": "chicanery",
+    "phonetic": "/ʃɪˈkeɪnəri/",
+    "translation": "n. 诡计",
+    "example": "Legal chicanery was used."
+  },
+  {
+    "word": "circumscribe",
+    "phonetic": "/ˈsɜːrkəmskraɪb/",
+    "translation": "v. 限制",
+    "example": "His powers were circumscribed."
+  },
+  {
+    "word": "coalesce",
+    "phonetic": "/ˌkəʊəˈles/",
+    "translation": "v. 合并",
+    "example": "Ideas coalesced into a plan."
+  },
+  {
+    "word": "cogent",
+    "phonetic": "/ˈkəʊdʒənt/",
+    "translation": "adj. 有说服力的",
+    "example": "A cogent argument."
+  },
+  {
+    "word": "commensurate",
+    "phonetic": "/kəˈmenʃərət/",
+    "translation": "adj. 相称的",
+    "example": "Salary commensurate with experience."
+  },
+  {
+    "word": "compelling",
+    "phonetic": "/kəmˈpelɪŋ/",
+    "translation": "adj. 引人注目的",
+    "example": "A compelling narrative."
+  },
+  {
+    "word": "complacent",
+    "phonetic": "/kəmˈpleɪsnt/",
+    "translation": "adj. 自满的",
+    "example": "Do not become complacent."
+  },
+  {
+    "word": "concomitant",
+    "phonetic": "/kɒnˈkɒmɪtənt/",
+    "translation": "adj. 伴随的",
+    "example": "A concomitant increase in costs."
+  },
+  {
+    "word": "condone",
+    "phonetic": "/kənˈdəʊn/",
+    "translation": "v. 宽恕",
+    "example": "We cannot condone violence."
+  },
+  {
+    "word": "congenial",
+    "phonetic": "/kənˈdʒiːniəl/",
+    "translation": "adj. 友善的",
+    "example": "A congenial atmosphere."
+  },
+  {
+    "word": "conjecture",
+    "phonetic": "/kənˈdʒektʃər/",
+    "translation": "n./v. 推测",
+    "example": "It is mere conjecture."
+  },
+  {
+    "word": "connive",
+    "phonetic": "/kəˈnaɪv/",
+    "translation": "v. 串通",
+    "example": "They connived to cheat the system."
+  },
+  {
+    "word": "contrite",
+    "phonetic": "/kənˈtraɪt/",
+    "translation": "adj. 悔悟的",
+    "example": "She appeared genuinely contrite."
+  },
+  {
+    "word": "conundrum",
+    "phonetic": "/kəˈnʌndrəm/",
+    "translation": "n. 难题",
+    "example": "A mathematical conundrum."
+  },
+  {
+    "word": "copious",
+    "phonetic": "/ˈkəʊpiəs/",
+    "translation": "adj. 大量的",
+    "example": "She took copious notes."
+  },
+  {
+    "word": "corroborate",
+    "phonetic": "/kəˈrɒbəreɪt/",
+    "translation": "v. 证实",
+    "example": "Evidence corroborated his claim."
+  },
+  {
+    "word": "cryptic",
+    "phonetic": "/ˈkrɪptɪk/",
+    "translation": "adj. 神秘的",
+    "example": "A cryptic message was left."
+  },
+  {
+    "word": "cursory",
+    "phonetic": "/ˈkɜːrsəri/",
+    "translation": "adj. 粗略的",
+    "example": "A cursory glance at the report."
+  },
+  {
+    "word": "dearth",
+    "phonetic": "/dɜːrθ/",
+    "translation": "n. 缺乏",
+    "example": "A dearth of talent in the market."
+  },
+  {
+    "word": "debilitate",
+    "phonetic": "/dɪˈbɪlɪteɪt/",
+    "translation": "v. 使虚弱",
+    "example": "The disease debilitated him."
+  },
+  {
+    "word": "decorum",
+    "phonetic": "/dɪˈkɔːrəm/",
+    "translation": "n. 得体",
+    "example": "Maintain decorum in the courtroom."
+  },
+  {
+    "word": "deference",
+    "phonetic": "/ˈdefərəns/",
+    "translation": "n. 尊重",
+    "example": "She spoke with deference."
+  },
+  {
+    "word": "delineate",
+    "phonetic": "/dɪˈlɪnieɪt/",
+    "translation": "v. 描绘",
+    "example": "The report delineates the key issues."
+  },
+  {
+    "word": "deleterious",
+    "phonetic": "/ˌdelɪˈtɪəriəs/",
+    "translation": "adj. 有害的",
+    "example": "The deleterious effects of pollution."
+  },
+  {
+    "word": "demagogue",
+    "phonetic": "/ˈdeməɡɒɡ/",
+    "translation": "n. 煽动者",
+    "example": "He was a dangerous demagogue."
+  },
+  {
+    "word": "demur",
+    "phonetic": "/dɪˈmɜːr/",
+    "translation": "v. 反对",
+    "example": "She demurred at the suggestion."
+  },
+  {
+    "word": "denigrate",
+    "phonetic": "/ˈdenɪɡreɪt/",
+    "translation": "v. 诋毁",
+    "example": "She was denigrated by the press."
+  },
+  {
+    "word": "deprecate",
+    "phonetic": "/ˈdeprɪkeɪt/",
+    "translation": "v. 反对",
+    "example": "He deprecated the use of force."
+  },
+  {
+    "word": "deride",
+    "phonetic": "/dɪˈraɪd/",
+    "translation": "v. 嘲笑",
+    "example": "Critics derided the proposal."
+  },
+  {
+    "word": "desiccate",
+    "phonetic": "/ˈdesɪkeɪt/",
+    "translation": "v. 使干燥",
+    "example": "Desiccated coconut flakes."
+  },
+  {
+    "word": "desultory",
+    "phonetic": "/ˈdesəltəri/",
+    "translation": "adj. 散漫的",
+    "example": "A desultory conversation."
+  },
+  {
+    "word": "diatribe",
+    "phonetic": "/ˈdaɪətraɪb/",
+    "translation": "n. 抨击",
+    "example": "She launched a diatribe against corruption."
+  },
+  {
+    "word": "dichotomy",
+    "phonetic": "/daɪˈkɒtəmi/",
+    "translation": "n. 二分法",
+    "example": "The dichotomy between theory and practice."
+  },
+  {
+    "word": "didactic",
+    "phonetic": "/daɪˈdæktɪk/",
+    "translation": "adj. 教诲的",
+    "example": "A didactic novel with a moral lesson."
+  },
+  {
+    "word": "diffident",
+    "phonetic": "/ˈdɪfɪdənt/",
+    "translation": "adj. 缺乏自信的",
+    "example": "A diffident young man."
+  },
+  {
+    "word": "digress",
+    "phonetic": "/daɪˈɡres/",
+    "translation": "v. 离题",
+    "example": "I digress; let me return to the point."
+  },
+  {
+    "word": "dilatory",
+    "phonetic": "/ˈdɪlətəri/",
+    "translation": "adj. 拖延的",
+    "example": "Dilatory tactics delayed the trial."
+  },
+  {
+    "word": "diligent",
+    "phonetic": "/ˈdɪlɪdʒənt/",
+    "translation": "adj. 勤勉的",
+    "example": "A diligent worker."
+  },
+  {
+    "word": "diminutive",
+    "phonetic": "/dɪˈmɪnjʊtɪv/",
+    "translation": "adj. 极小的",
+    "example": "A diminutive figure."
+  },
+  {
+    "word": "discerning",
+    "phonetic": "/dɪˈsɜːrnɪŋ/",
+    "translation": "adj. 有洞察力的",
+    "example": "A discerning critic."
+  },
+  {
+    "word": "discomfit",
+    "phonetic": "/dɪsˈkʌmfɪt/",
+    "translation": "v. 使不安",
+    "example": "His question discomfited her."
+  },
+  {
+    "word": "discordant",
+    "phonetic": "/dɪsˈkɔːrdənt/",
+    "translation": "adj. 不和谐的",
+    "example": "Discordant voices in the debate."
+  },
+  {
+    "word": "disinterested",
+    "phonetic": "/dɪsˈɪntrəstɪd/",
+    "translation": "adj. 公正的",
+    "example": "A disinterested observer."
+  },
+  {
+    "word": "disparage",
+    "phonetic": "/dɪˈspærɪdʒ/",
+    "translation": "v. 贬低",
+    "example": "He disparaged her achievements."
+  },
+  {
+    "word": "disparate",
+    "phonetic": "/ˈdɪspərət/",
+    "translation": "adj. 迥然不同的",
+    "example": "Disparate groups united for a cause."
+  },
+  {
+    "word": "disseminate",
+    "phonetic": "/dɪˈsemɪneɪt/",
+    "translation": "v. 传播",
+    "example": "Disseminate knowledge widely."
+  },
+  {
+    "word": "dissonance",
+    "phonetic": "/ˈdɪsənəns/",
+    "translation": "n. 不和谐",
+    "example": "Cognitive dissonance in belief systems."
+  },
+  {
+    "word": "dogmatic",
+    "phonetic": "/dɒɡˈmætɪk/",
+    "translation": "adj. 武断的",
+    "example": "A dogmatic approach to politics."
+  },
+  {
+    "word": "dubious",
+    "phonetic": "/ˈdjuːbiəs/",
+    "translation": "adj. 可疑的",
+    "example": "A dubious claim."
+  },
+  {
+    "word": "ebullient",
+    "phonetic": "/ɪˈbʊliənt/",
+    "translation": "adj. 热情洋溢的",
+    "example": "An ebullient personality."
+  },
+  {
+    "word": "eclectic",
+    "phonetic": "/ɪˈklektɪk/",
+    "translation": "adj. 折衷的",
+    "example": "An eclectic taste in music."
+  },
+  {
+    "word": "edify",
+    "phonetic": "/ˈedɪfaɪ/",
+    "translation": "v. 启发",
+    "example": "A lecture intended to edify."
+  },
+  {
+    "word": "efficacious",
+    "phonetic": "/ˌefɪˈkeɪʃəs/",
+    "translation": "adj. 有效的",
+    "example": "An efficacious remedy."
+  },
+  {
+    "word": "effusive",
+    "phonetic": "/ɪˈfjuːsɪv/",
+    "translation": "adj. 感情外露的",
+    "example": "Effusive praise was given."
+  },
+  {
+    "word": "egregious",
+    "phonetic": "/ɪˈɡriːdʒiəs/",
+    "translation": "adj. 极其恶劣的",
+    "example": "An egregious error."
+  },
+  {
+    "word": "elicit",
+    "phonetic": "/ɪˈlɪsɪt/",
+    "translation": "v. 引出",
+    "example": "The question elicited a strong response."
+  },
+  {
+    "word": "elucidate",
+    "phonetic": "/ɪˈluːsɪdeɪt/",
+    "translation": "v. 阐明",
+    "example": "Please elucidate your argument."
+  },
+  {
+    "word": "emulate",
+    "phonetic": "/ˈemjʊleɪt/",
+    "translation": "v. 效仿",
+    "example": "She emulated her mother."
+  },
+  {
+    "word": "endemic",
+    "phonetic": "/enˈdemɪk/",
+    "translation": "adj. 地方性的",
+    "example": "Corruption is endemic in the system."
+  },
+  {
+    "word": "enigmatic",
+    "phonetic": "/ˌenɪɡˈmætɪk/",
+    "translation": "adj. 神秘的",
+    "example": "An enigmatic smile."
+  },
+  {
+    "word": "ennui",
+    "phonetic": "/ɒnˈwiː/",
+    "translation": "n. 无聊",
+    "example": "A sense of ennui pervaded the room."
+  },
+  {
+    "word": "ephemeral",
+    "phonetic": "/ɪˈfemərəl/",
+    "translation": "adj. 短暂的",
+    "example": "Fame is ephemeral."
+  },
+  {
+    "word": "equanimity",
+    "phonetic": "/ˌekwəˈnɪmɪti/",
+    "translation": "n. 镇定",
+    "example": "She accepted the news with equanimity."
+  },
+  {
+    "word": "equivocal",
+    "phonetic": "/ɪˈkwɪvəkl/",
+    "translation": "adj. 模棱两可的",
+    "example": "An equivocal response."
+  },
+  {
+    "word": "erudite",
+    "phonetic": "/ˈeruːdaɪt/",
+    "translation": "adj. 博学的",
+    "example": "An erudite professor."
+  },
+  {
+    "word": "esoteric",
+    "phonetic": "/ˌesəˈterɪk/",
+    "translation": "adj. 深奥的",
+    "example": "Esoteric philosophical concepts."
+  },
+  {
+    "word": "eulogy",
+    "phonetic": "/ˈjuːlədʒi/",
+    "translation": "n. 颂词",
+    "example": "He delivered a moving eulogy."
+  },
+  {
+    "word": "euphemism",
+    "phonetic": "/ˈjuːfəmɪzəm/",
+    "translation": "n. 委婉语",
+    "example": "Passed away is a euphemism for died."
+  },
+  {
+    "word": "exacerbate",
+    "phonetic": "/ɪɡˈzæsərbeɪt/",
+    "translation": "v. 加剧",
+    "example": "The drought exacerbated food shortages."
+  },
+  {
+    "word": "exalt",
+    "phonetic": "/ɪɡˈzɔːlt/",
+    "translation": "v. 颂扬",
+    "example": "They exalted his achievements."
+  },
+  {
+    "word": "exonerate",
+    "phonetic": "/ɪɡˈzɒnəreɪt/",
+    "translation": "v. 免罪",
+    "example": "DNA evidence exonerated the suspect."
+  },
+  {
+    "word": "expatiate",
+    "phonetic": "/ɪkˈspeɪʃieɪt/",
+    "translation": "v. 详述",
+    "example": "He expatiated on the topic at length."
+  },
+  {
+    "word": "expedient",
+    "phonetic": "/ɪkˈspiːdiənt/",
+    "translation": "adj. 权宜的",
+    "example": "A politically expedient decision."
+  },
+  {
+    "word": "extol",
+    "phonetic": "/ɪkˈstəʊl/",
+    "translation": "v. 极力赞美",
+    "example": "Critics extolled the performance."
+  },
+  {
+    "word": "extraneous",
+    "phonetic": "/ɪkˈstreɪniəs/",
+    "translation": "adj. 无关的",
+    "example": "Exclude extraneous details."
+  },
+  {
+    "word": "facetious",
+    "phonetic": "/fəˈsiːʃəs/",
+    "translation": "adj. 滑稽的",
+    "example": "A facetious remark."
+  },
+  {
+    "word": "fallacious",
+    "phonetic": "/fəˈleɪʃəs/",
+    "translation": "adj. 谬误的",
+    "example": "A fallacious argument."
+  },
+  {
+    "word": "fastidious",
+    "phonetic": "/fæˈstɪdiəs/",
+    "translation": "adj. 一丝不苟的",
+    "example": "She is fastidious about cleanliness."
+  },
+  {
+    "word": "fecund",
+    "phonetic": "/ˈfekənd/",
+    "translation": "adj. 多产的",
+    "example": "A fecund imagination."
+  },
+  {
+    "word": "fervent",
+    "phonetic": "/ˈfɜːrvənt/",
+    "translation": "adj. 热烈的",
+    "example": "A fervent supporter."
+  },
+  {
+    "word": "flagrant",
+    "phonetic": "/ˈfleɪɡrənt/",
+    "translation": "adj. 公然的",
+    "example": "A flagrant violation of the law."
+  },
+  {
+    "word": "frivolous",
+    "phonetic": "/ˈfrɪvələs/",
+    "translation": "adj. 轻浮的",
+    "example": "A frivolous lawsuit."
+  },
+  {
+    "word": "frugal",
+    "phonetic": "/ˈfruːɡl/",
+    "translation": "adj. 节俭的",
+    "example": "A frugal lifestyle."
+  },
+  {
+    "word": "garrulous",
+    "phonetic": "/ˈɡærʊləs/",
+    "translation": "adj. 话多的",
+    "example": "A garrulous old man."
+  },
+  {
+    "word": "germane",
+    "phonetic": "/dʒɜːrˈmeɪn/",
+    "translation": "adj. 有密切关系的",
+    "example": "Comments not germane to the discussion."
+  },
+  {
+    "word": "gregarious",
+    "phonetic": "/ɡrɪˈɡeəriəs/",
+    "translation": "adj. 爱交际的",
+    "example": "A gregarious personality."
+  },
+  {
+    "word": "hackneyed",
+    "phonetic": "/ˈhæknid/",
+    "translation": "adj. 陈腐的",
+    "example": "A hackneyed phrase."
+  },
+  {
+    "word": "harangue",
+    "phonetic": "/həˈræŋ/",
+    "translation": "n./v. 长篇大论",
+    "example": "He harangued the audience for an hour."
+  },
+  {
+    "word": "hedonist",
+    "phonetic": "/ˈhiːdənɪst/",
+    "translation": "n. 享乐主义者",
+    "example": "A self-proclaimed hedonist."
+  },
+  {
+    "word": "iconoclast",
+    "phonetic": "/aɪˈkɒnəklæst/",
+    "translation": "n. 偶像破坏者",
+    "example": "She was an iconoclast in her field."
+  },
+  {
+    "word": "idiosyncratic",
+    "phonetic": "/ˌɪdiəsɪŋˈkrætɪk/",
+    "translation": "adj. 独特的",
+    "example": "His idiosyncratic style."
+  },
+  {
+    "word": "impecunious",
+    "phonetic": "/ˌɪmpɪˈkjuːniəs/",
+    "translation": "adj. 贫穷的",
+    "example": "An impecunious student."
+  },
+  {
+    "word": "impervious",
+    "phonetic": "/ɪmˈpɜːrviəs/",
+    "translation": "adj. 不受影响的",
+    "example": "Impervious to criticism."
+  },
+  {
+    "word": "implacable",
+    "phonetic": "/ɪmˈplækəbl/",
+    "translation": "adj. 难以平息的",
+    "example": "An implacable enemy."
+  },
+  {
+    "word": "implicit",
+    "phonetic": "/ɪmˈplɪsɪt/",
+    "translation": "adj. 含蓄的",
+    "example": "Implicit trust in her judgment."
+  },
+  {
+    "word": "impudent",
+    "phonetic": "/ˈɪmpjʊdənt/",
+    "translation": "adj. 无礼的",
+    "example": "An impudent child."
+  },
+  {
+    "word": "inchoate",
+    "phonetic": "/ɪnˈkəʊeɪt/",
+    "translation": "adj. 初始的",
+    "example": "An inchoate plan."
+  },
+  {
+    "word": "incongruous",
+    "phonetic": "/ɪnˈkɒŋɡruəs/",
+    "translation": "adj. 不协调的",
+    "example": "An incongruous sight."
+  },
+  {
+    "word": "incorrigible",
+    "phonetic": "/ɪnˈkɒrɪdʒəbl/",
+    "translation": "adj. 不可救药的",
+    "example": "An incorrigible optimist."
+  },
+  {
+    "word": "indigenous",
+    "phonetic": "/ɪnˈdɪdʒɪnəs/",
+    "translation": "adj. 土生土长的",
+    "example": "Indigenous populations."
+  },
+  {
+    "word": "indolent",
+    "phonetic": "/ˈɪndələnt/",
+    "translation": "adj. 懒惰的",
+    "example": "An indolent lifestyle."
+  }
+]

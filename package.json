@@ -1,0 +1,19 @@
+{
+  "name": "wordwise-server",
+  "version": "4.0.0",
+  "description": "WordWise English Vocabulary Learning Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["english", "vocabulary", "learning"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0"
+  }
+}
