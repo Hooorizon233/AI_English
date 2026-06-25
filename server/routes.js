@@ -402,6 +402,66 @@ router.get('/ai/cache/:word', requireAuth, (req, res) => {
     res.json({ ok: true, cached: !!entry, data: entry || null });
 });
 
+// Get smart preheat word list: review words first, then new unstudied words
+router.get('/ai/preheat-words', requireAuth, (req, res) => {
+    const count = parseInt(req.query.count) || 20;
+    const userData = req.userData;
+    const studyData = userData.studyData || {};
+    const aiCache = userData.aiCache || {};
+    const today = new Date().toISOString().split('T')[0];
+
+    // Load all selected bank words
+    const selectedBanks = userData.selectedBanks || ['recommended'];
+    let allWords = [];
+    for (const bankId of selectedBanks) {
+        const words = loadBankFromFile(bankId);
+        allWords = allWords.concat(words);
+    }
+    // Deduplicate
+    const seen = new Set();
+    allWords = allWords.filter(w => {
+        const key = w.word.toLowerCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
+
+    // 1. Review-ready words (from pre-computed index, not yet cached)
+    const reviewWords = [];
+    const reviewIndex = userData.reviewIndex || [];
+    const wordMap = {};
+    for (const w of allWords) wordMap[w.word.toLowerCase()] = w;
+
+    for (const w of reviewIndex) {
+        if (reviewWords.length >= count) break;
+        if (aiCache[w]) continue; // Already cached
+        const obj = wordMap[w.toLowerCase()];
+        if (obj) reviewWords.push(obj);
+    }
+
+    // 2. New unstudied words (not in studyData, not yet cached)
+    const newWords = [];
+    for (const w of allWords) {
+        if (newWords.length >= count) break;
+        const key = w.word.toLowerCase();
+        if (studyData[key]) continue; // Already studied
+        if (aiCache[key]) continue;   // Already cached
+        if (reviewWords.find(r => r.word.toLowerCase() === key)) continue; // Already in review list
+        newWords.push(w);
+    }
+
+    // Combine: review first, then new
+    const targets = [...reviewWords, ...newWords].slice(0, count);
+
+    res.json({
+        ok: true,
+        count: targets.length,
+        reviewCount: reviewWords.length,
+        newCount: Math.min(newWords.length, count - reviewWords.length),
+        words: targets
+    });
+});
+
 router.post('/ai/generate', requireAuth, async (req, res) => {
     try {
         const { word } = req.body;
@@ -423,8 +483,8 @@ router.post('/ai/generate', requireAuth, async (req, res) => {
             return res.json({ ok: false, msg: '请先在设置中配置 AI API 密钥' });
         }
 
-        // Build prompt
-        const PROMOTION = settings.customPrompt || `你是一位专业的英语词汇教学专家。请为以下英语单词生成详细的记忆辅助内容。
+        // Build prompt — replace {word} placeholder if present
+        let prompt = settings.customPrompt || `你是一位专业的英语词汇教学专家。请为以下英语单词生成详细的记忆辅助内容。
 
 请用中文输出，格式如下：
 
@@ -448,7 +508,10 @@ router.post('/ai/generate', requireAuth, async (req, res) => {
 
 请确保内容丰富、准确、实用，每个部分都要详细展开。`;
 
-        const content = await callAI(apiKey, provider, model, PROMOTION, word, settings.customUrl);
+        // Replace {word} placeholders in prompt (for custom prompts)
+        prompt = prompt.replace(/\{word\}/g, word);
+
+        const content = await callAI(apiKey, provider, model, prompt, word, settings.customUrl);
 
         // Cache result
         if (!req.userData.aiCache) req.userData.aiCache = {};

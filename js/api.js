@@ -124,6 +124,11 @@ const API = (() => {
         return request('POST', '/api/ai/generate', { word });
     }
 
+    async function getPreheatWords(count) {
+        const result = await request('GET', `/api/ai/preheat-words?count=${count || 20}`);
+        return result.ok ? result : { words: [], count: 0 };
+    }
+
     async function getAIStats() {
         const result = await request('GET', '/api/ai/stats');
         return result.ok ? result : { cacheCount: 0, cacheSize: 0, usage: { totalTokens: 0, callCount: 0 } };
@@ -213,6 +218,7 @@ const API = (() => {
         getAICache,
         generateAI,
         getAIStats,
+        getPreheatWords,
         clearAICache,
         getNotebook,
         migrate,

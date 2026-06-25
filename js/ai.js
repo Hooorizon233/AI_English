@@ -352,33 +352,22 @@ async function startBatchPreGenerate() {
     const settings = await API.getSettings();
     const preheatCount = settings.preheatCount || 20;
 
-    // Load all selected words
-    const allWords = await WordBank.loadSelectedWords();
-    if (allWords.length === 0) {
-        showToast('请先选择词库');
-        return;
-    }
-
-    // Pick the first N uncached words from the word bank (frequency-sorted by default)
-    // This covers both new and review words since they all come from the same bank
-    const targetWords = [];
-    for (const w of allWords) {
-        if (targetWords.length >= preheatCount) break;
-        const cached = await API.getAICache(w.word);
-        if (!cached) targetWords.push(w);
-    }
+    // Ask server for smart preheat word list:
+    // priority: review-ready words (urgent) > new unstudied words (upcoming)
+    const result = await API.getPreheatWords(preheatCount);
+    const targetWords = result.words || [];
 
     if (targetWords.length === 0) {
         showToast('所选单词已全部预热完毕 ✅');
         return;
     }
 
-    showBatchModal(targetWords, targetWords.length);
+    showBatchModal(targetWords, targetWords.length, result.reviewCount || 0);
 }
 
-function showBatchModal(words, uncachedCount) {
+function showBatchModal(words, uncachedCount, reviewCount) {
     const totalCount = words.length;
-    const cachedCount = totalCount - uncachedCount;
+    const newCount = totalCount - (reviewCount || 0);
 
     const modalHTML = `
     <div class="modal-overlay show" id="batch-modal" onclick="closeBatchModal(event)">
@@ -393,15 +382,16 @@ function showBatchModal(words, uncachedCount) {
           <div class="stats-grid" style="margin-bottom:20px;">
             <div class="stat-card">
               <div class="stat-value">${totalCount}</div>
-              <div class="stat-label">待学单词</div>
+              <div class="stat-label">待预热</div>
             </div>
+            ${reviewCount > 0 ? `
             <div class="stat-card">
-              <div class="stat-value text-success">${cachedCount}</div>
-              <div class="stat-label">已缓存</div>
-            </div>
+              <div class="stat-value" style="color:var(--danger);">${reviewCount}</div>
+              <div class="stat-label">待复习</div>
+            </div>` : ''}
             <div class="stat-card">
-              <div class="stat-value" style="color:var(--primary);">${uncachedCount}</div>
-              <div class="stat-label">需生成</div>
+              <div class="stat-value" style="color:var(--primary);">${newCount}</div>
+              <div class="stat-label">新单词</div>
             </div>
           </div>
           <div id="batch-progress-area" style="display:none; margin-bottom:16px;">
