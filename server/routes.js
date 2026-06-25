@@ -189,7 +189,7 @@ router.get('/study/progress', requireAuth, (req, res) => {
     const userData = req.userData;
     const studyData = userData.studyData || {};
     const today = new Date().toISOString().split('T')[0];
-    const INTERVALS = [0, 1, 3, 7, 15, 30];
+    const INTERVALS = [1, 2, 4, 7, 15, 30];
 
     const learnedCount = Object.keys(studyData).length;
 
@@ -233,7 +233,7 @@ router.post('/study/start', requireAuth, (req, res) => {
     const allWords = getSelectedWords(req.username);
     const studyData = req.userData.studyData || {};
     const today = new Date().toISOString().split('T')[0];
-    const INTERVALS = [0, 1, 3, 7, 15, 30];
+    const INTERVALS = [1, 2, 4, 7, 15, 30];
 
     if (mode === 'review') {
         // Use pre-computed review index
@@ -297,8 +297,7 @@ router.post('/study/mark', requireAuth, (req, res) => {
     const { word, result } = req.body; // result: 'known' | 'unknown' | 'fuzzy'
     const studyData = req.userData.studyData || {};
     const today = new Date().toISOString().split('T')[0];
-    const INTERVALS = [0, 1, 3, 7, 15, 30];
-    const REQUIRED_CORRECT = req.userData.settings?.requiredCorrect || 2;
+    const INTERVALS = [1, 2, 4, 7, 15, 30];
 
     let record = studyData[word];
     if (!record) {
@@ -315,7 +314,8 @@ router.post('/study/mark', requireAuth, (req, res) => {
 
     if (result === 'known') {
         record.correctCount++;
-        if (record.correctCount >= REQUIRED_CORRECT && record.stage < INTERVALS.length) {
+        // Client already handles requiredCorrect gating — advance stage directly
+        if (record.stage < INTERVALS.length) {
             record.stage++;
         }
     } else if (result === 'unknown') {
@@ -509,7 +509,7 @@ router.get('/notebook', requireAuth, (req, res) => {
 
     // Filter
     if (filter === 'mastered') {
-        const INTERVALS = [0, 1, 3, 7, 15, 30];
+        const INTERVALS = [1, 2, 4, 7, 15, 30];
         entries = entries.filter(e => e.stage >= INTERVALS.length);
     } else if (filter === 'learning') {
         entries = entries.filter(e => e.nextReviewDate && e.nextReviewDate >= today);

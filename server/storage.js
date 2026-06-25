@@ -128,7 +128,7 @@ function updateReviewIndex(username, userData) {
     }
 
     const today = new Date().toISOString().split('T')[0];
-    const INTERVALS = [0, 1, 3, 7, 15, 30];
+    const INTERVALS = [1, 2, 4, 7, 15, 30];
 
     // Only recompute if date changed or study data changed
     const todayRecord = userData.today || {};

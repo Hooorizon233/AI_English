@@ -50,11 +50,17 @@ echo.
 echo Installing dependencies...
 cd /d "%~dp0"
 
-:: Set PATH so npm.cmd can find node.exe
-set "PATH=%~dp0nodejs;%PATH%"
-call "%~dp0nodejs\npm.cmd" install --registry=https://registry.npmmirror.com 2>nul
+:: Use npm from same location as node
+if exist "%~dp0nodejs\npm.cmd" (
+    set "PATH=%~dp0nodejs;%PATH%"
+    set "NPM_CMD=%~dp0nodejs\npm.cmd"
+) else (
+    set "NPM_CMD=npm"
+)
+
+call "%NPM_CMD%" install --registry=https://registry.npmmirror.com 2>nul
 if %ERRORLEVEL% NEQ 0 (
-    call "%~dp0nodejs\npm.cmd" install
+    call "%NPM_CMD%" install
 )
 
 echo.

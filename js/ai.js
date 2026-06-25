@@ -349,47 +349,31 @@ async function startBatchPreGenerate() {
         return;
     }
 
+    const settings = await API.getSettings();
+    const preheatCount = settings.preheatCount || 20;
+
+    // Load all selected words
     const allWords = await WordBank.loadSelectedWords();
     if (allWords.length === 0) {
         showToast('请先选择词库');
         return;
     }
 
-    const settings = await API.getSettings();
-    const preheatCount = settings.preheatCount || 20;
-
-    // First N unstudied words
-    const progress = await API.getProgress();
-    const studyDataCount = progress.learned || 0;
-    const newWords = allWords.slice(0, preheatCount + studyDataCount);
-    const reviewReady = allWords.filter(w => {
-        // Simple client-side filter; server has the authoritative review index
-        return true;
-    }).slice(0, preheatCount);
-
-    // Deduplicate
-    const targetMap = new Map();
-    [...newWords, ...reviewReady].forEach(w => targetMap.set(w.word, w));
-    const targetWords = Array.from(targetMap.values()).slice(0, preheatCount);
+    // Pick the first N uncached words from the word bank (frequency-sorted by default)
+    // This covers both new and review words since they all come from the same bank
+    const targetWords = [];
+    for (const w of allWords) {
+        if (targetWords.length >= preheatCount) break;
+        const cached = await API.getAICache(w.word);
+        if (!cached) targetWords.push(w);
+    }
 
     if (targetWords.length === 0) {
-        showToast('没有需要预热的单词');
+        showToast('所选单词已全部预热完毕 ✅');
         return;
     }
 
-    // Check how many already cached
-    let uncachedCount = 0;
-    for (const w of targetWords) {
-        const cached = await API.getAICache(w.word);
-        if (!cached) uncachedCount++;
-    }
-
-    if (uncachedCount === 0) {
-        showToast('所有待学单词已预热完毕 ✅');
-        return;
-    }
-
-    showBatchModal(targetWords, uncachedCount);
+    showBatchModal(targetWords, targetWords.length);
 }
 
 function showBatchModal(words, uncachedCount) {
