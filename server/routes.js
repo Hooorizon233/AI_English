@@ -402,13 +402,13 @@ router.get('/ai/cache/:word', requireAuth, (req, res) => {
     res.json({ ok: true, cached: !!entry, data: entry || null });
 });
 
-// Get smart preheat word list: review words first, then new unstudied words
+// Get smart preheat word list: review words first, then next new words (same sort as startStudy)
 router.get('/ai/preheat-words', requireAuth, (req, res) => {
     const count = parseInt(req.query.count) || 20;
     const userData = req.userData;
     const studyData = userData.studyData || {};
-    const aiCache = userData.aiCache || {};
     const today = new Date().toISOString().split('T')[0];
+    const sortMode = userData.settings?.sortMode || 'frequency';
 
     // Load all selected bank words
     const selectedBanks = userData.selectedBanks || ['recommended'];
@@ -426,31 +426,33 @@ router.get('/ai/preheat-words', requireAuth, (req, res) => {
         return true;
     });
 
-    // 1. Review-ready words (from pre-computed index, not yet cached)
-    const reviewWords = [];
-    const reviewIndex = userData.reviewIndex || [];
     const wordMap = {};
     for (const w of allWords) wordMap[w.word.toLowerCase()] = w;
 
+    // 1. Review-ready words (from pre-computed index)
+    const reviewIndex = userData.reviewIndex || [];
+    const reviewWords = [];
     for (const w of reviewIndex) {
         if (reviewWords.length >= count) break;
-        if (aiCache[w]) continue; // Already cached
         const obj = wordMap[w.toLowerCase()];
         if (obj) reviewWords.push(obj);
     }
 
-    // 2. New unstudied words (not in studyData, not yet cached)
-    const newWords = [];
-    for (const w of allWords) {
-        if (newWords.length >= count) break;
-        const key = w.word.toLowerCase();
-        if (studyData[key]) continue; // Already studied
-        if (aiCache[key]) continue;   // Already cached
-        if (reviewWords.find(r => r.word.toLowerCase() === key)) continue; // Already in review list
-        newWords.push(w);
+    // Build set of review word keys to skip them in new words
+    const reviewKeys = new Set(reviewWords.map(r => r.word.toLowerCase()));
+
+    // 2. New unstudied words — same sorting as startStudy learn mode
+    let newWords = allWords.filter(w => !studyData[w.word] && !reviewKeys.has(w.word.toLowerCase()));
+
+    if (sortMode === 'frequency') {
+        newWords.sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
+    } else if (sortMode === 'random') {
+        newWords.sort(() => Math.random() - 0.5);
+    } else {
+        newWords.sort((a, b) => (a.word || '').localeCompare(b.word || ''));
     }
 
-    // Combine: review first, then new
+    // Combine: review first, then next new words
     const targets = [...reviewWords, ...newWords].slice(0, count);
 
     res.json({

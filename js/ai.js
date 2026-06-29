@@ -350,10 +350,15 @@ async function startBatchPreGenerate() {
     }
 
     const settings = await API.getSettings();
+    if (!settings.apiKey) {
+        showToast('请先在设置中配置 AI API 密钥');
+        return;
+    }
+
     const preheatCount = settings.preheatCount || 20;
 
     // Ask server for smart preheat word list:
-    // priority: review-ready words (urgent) > new unstudied words (upcoming)
+    // priority: review-ready words (urgent) > next new words (same sort as 开始学习)
     const result = await API.getPreheatWords(preheatCount);
     const targetWords = result.words || [];
 
@@ -362,7 +367,19 @@ async function startBatchPreGenerate() {
         return;
     }
 
-    showBatchModal(targetWords, targetWords.length, result.reviewCount || 0);
+    // Count how many actually need caching
+    let uncachedCount = 0;
+    for (const w of targetWords) {
+        const cached = await AI.getCachedContent(w.word);
+        if (!cached) uncachedCount++;
+    }
+
+    if (uncachedCount === 0) {
+        showToast('所选单词已全部预热完毕 ✅');
+        return;
+    }
+
+    showBatchModal(targetWords, uncachedCount, result.reviewCount || 0);
 }
 
 function showBatchModal(words, uncachedCount, reviewCount) {
