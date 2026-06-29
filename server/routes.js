@@ -527,7 +527,7 @@ router.post('/ai/generate', requireAuth, async (req, res) => {
         // Update usage
         if (!req.userData.usage) req.userData.usage = { totalTokens: 0, callCount: 0 };
         req.userData.usage.callCount++;
-        req.userData.usage.totalTokens += estimateTokens(content + PROMOTION + word);
+        req.userData.usage.totalTokens += estimateTokens(content + prompt + word);
 
         storage.writeUser(req.username, req.userData);
 
