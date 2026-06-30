@@ -13,6 +13,8 @@ const Auth = {
         const result = await API.register(username, password);
         if (result.ok) {
             this._session = { username, loginAt: Date.now(), isAdmin: result.isAdmin };
+            // Clear cached data from previous session
+            if (typeof WordBank !== 'undefined') WordBank._selectedBanks = null;
             // Check if migration needed
             this._checkMigration();
         }

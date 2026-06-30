@@ -34,10 +34,6 @@ async function loadSettingsPage() {
     const preheatEl = document.getElementById('preheat-count');
     if (preheatEl) preheatEl.value = settings.preheatCount || 20;
 
-    // Review batch size
-    const reviewBatchEl = document.getElementById('review-batch-size');
-    if (reviewBatchEl) reviewBatchEl.value = settings.reviewBatchSize || 100;
-
     // Dark mode
     document.getElementById('dark-mode-toggle').checked = document.documentElement.getAttribute('data-theme') === 'dark';
 
@@ -183,13 +179,6 @@ async function saveDailyWords() {
     const value = document.getElementById('daily-new-words').value;
     await API.saveSettings({ dailyNewWords: parseInt(value) });
     showToast(`每日新词已设为 ${value} 个`);
-}
-
-async function saveReviewBatchSize() {
-    const value = document.getElementById('review-batch-size')?.value;
-    if (!value) return;
-    await API.saveSettings({ reviewBatchSize: parseInt(value) });
-    showToast(`每次复习 ${value} 个单词`);
 }
 
 async function toggleDarkMode() {

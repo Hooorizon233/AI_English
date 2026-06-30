@@ -53,21 +53,14 @@ const Study = {
             return false;
         }
 
-        // Get settings for batch size
-        let batchSize = wordCount || 20;
-        if (mode === 'review') {
-            const settings = await API.getSettings();
-            batchSize = settings.reviewBatchSize || 100;
-        }
-
         // Start session on server
-        const result = await API.startStudy(mode, batchSize);
+        const result = await API.startStudy(mode, wordCount || 20);
         if (!result.ok) {
             showToast(result.msg || '启动学习失败');
             return false;
         }
 
-        const { session, wordsRemaining } = result;
+        const { session } = result;
         if (!session || !session.queue || session.queue.length === 0) {
             if (mode === 'review') {
                 showToast('暂无需要复习的单词 🎉');
@@ -90,9 +83,7 @@ const Study = {
             learnedWords: 0,
             requiredCorrect: requiredCorrect,
             results: { correct: 0, wrong: 0, fuzzy: 0, actions: 0 },
-            wordState: {},
-            _wordsRemainingOnServer: wordsRemaining || 0,
-            _batchCount: batchSize
+            wordState: {}
         };
 
         // Initialize word states
@@ -188,11 +179,6 @@ const Study = {
 
     isSessionComplete() {
         return this.session.queue.length === 0;
-    },
-
-    // Check if more review words remain on server
-    getWordsRemaining() {
-        return this.session._wordsRemainingOnServer || 0;
     }
 };
 
@@ -403,25 +389,18 @@ async function finishSession() {
     const learned = Study.session.learnedWords;
     const totalActions = results.actions;
     const mode = Study.session.mode;
-    const wordsRemaining = Study.getWordsRemaining();
 
-    // Check if there are more review words on the server
-    let hasReviewWords = wordsRemaining > 0;
-    let hasMoreWords = false;
-
-    if (mode === 'learn') {
-        const progress = await Study.getProgress(true);
-        hasReviewWords = progress.reviewReady > 0;
-        hasMoreWords = true; // Always possible to learn more
-    }
+    const progress = await Study.getProgress(true);
+    const hasReviewWords = progress.reviewReady > 0;
+    const hasMoreWords = mode === 'learn';
 
     const continueReviewBtn = hasReviewWords ? `
         <button class="btn btn-block btn-lg mt-8" onclick="closeFinishModal(); startReview();"
                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
-          🔄 继续复习 ${wordsRemaining > 0 ? '(' + wordsRemaining + '个待复习)' : ''}
+          🔄 复习单词 (${progress.reviewReady}个)
         </button>` : '';
 
-    const continueLearnBtn = (mode === 'learn' && hasMoreWords) ? `
+    const continueLearnBtn = hasMoreWords ? `
         <button class="btn btn-block mt-8" onclick="closeFinishModal(); startStudy();"
                 style="background: var(--primary); color: white; border: none;">
           🔥 继续学新词

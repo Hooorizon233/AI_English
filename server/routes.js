@@ -227,7 +227,6 @@ router.get('/study/progress', requireAuth, (req, res) => {
 
 router.post('/study/start', requireAuth, (req, res) => {
     const { mode, count } = req.body;
-    const batchSize = count || req.userData.settings?.reviewBatchSize || 100;
 
     let words = [];
     const allWords = getSelectedWords(req.username);
@@ -250,9 +249,8 @@ router.post('/study/start', requireAuth, (req, res) => {
         for (const w of allWords) wordMap[w.word.toLowerCase()] = w;
 
         words = reviewWords
-            .slice(0, batchSize)
             .map(w => wordMap[w.toLowerCase()])
-            .filter(Boolean);
+            .filter(Boolean);  // ALL review words — no batch limit
     } else {
         // Learn mode — new words not yet studied
         const sortMode = req.userData.settings?.sortMode || 'frequency';
@@ -268,7 +266,8 @@ router.post('/study/start', requireAuth, (req, res) => {
             newWords.sort((a, b) => (a.word || '').localeCompare(b.word || ''));
         }
 
-        words = newWords.slice(0, batchSize);
+        const limit = count || req.userData.settings?.dailyNewWords || 20;
+        words = newWords.slice(0, limit);
     }
 
     // Create session
@@ -300,7 +299,8 @@ router.post('/study/mark', requireAuth, (req, res) => {
     const INTERVALS = [1, 2, 4, 7, 15, 30];
 
     let record = studyData[word];
-    if (!record) {
+    const isNew = !record;
+    if (isNew) {
         record = {
             stage: 0,
             correctCount: 0,
@@ -312,21 +312,22 @@ router.post('/study/mark', requireAuth, (req, res) => {
         };
     }
 
+    // Calculate next review interval based on CURRENT stage (before adjustment)
+    // Stage 0 → 1 day, Stage 1 → 2 days, Stage 2 → 4 days, etc.
+    const currentStage = record.stage;
+    const interval = INTERVALS[Math.min(currentStage, INTERVALS.length - 1)] || 30;
+
+    // Now adjust stage for next review cycle
     if (result === 'known') {
         record.correctCount++;
-        // Client already handles requiredCorrect gating — advance stage directly
-        if (record.stage < INTERVALS.length) {
-            record.stage++;
-        }
+        if (record.stage < INTERVALS.length) record.stage++;
     } else if (result === 'unknown') {
         record.wrongCount++;
-        record.stage = Math.max(0, record.stage - 1);
-    } else if (result === 'fuzzy') {
-        record.fuzzyCount++;
+        if (record.stage > 0) record.stage--;
     }
+    // fuzzy: stage stays the same
 
-    // Calculate next review date
-    const interval = INTERVALS[Math.min(record.stage, INTERVALS.length - 1)] || 30;
+    // Set review dates
     const next = new Date();
     next.setDate(next.getDate() + interval);
     record.nextReviewDate = next.toISOString().split('T')[0];
@@ -360,10 +361,12 @@ router.post('/study/mark', requireAuth, (req, res) => {
         req.userData.session.learnedWords = (req.userData.session.learnedWords || 0) + 1;
     }
 
-    // Save user data
+    // Clear stale review index — will be recomputed on next progress check
+    req.userData.reviewIndex = null;
+    if (req.userData.today) req.userData.today.reviewIndexDate = null;
+
     storage.writeUser(req.username, req.userData);
 
-    // Invalidate review index (will be recomputed on next progress check)
     res.json({
         ok: true,
         record,

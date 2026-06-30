@@ -39,7 +39,6 @@ function defaultUserData(username, passwordHash) {
             requiredCorrect: 2,
             sortMode: 'frequency',
             preheatCount: 20,
-            reviewBatchSize: 100,
             theme: 'light'
         },
         today: { newWords: 0, reviewed: 0, date: new Date().toISOString().split('T')[0] },
