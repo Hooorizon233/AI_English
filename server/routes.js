@@ -9,6 +9,18 @@ const http = require('http');
 
 const router = express.Router();
 
+// Seeded random shuffle — same seed → same order all day
+function seededShuffle(arr) {
+    const dateStr = new Date().toISOString().split('T')[0].replace(/-/g, '');
+    let seed = parseInt(dateStr);
+    for (let i = arr.length - 1; i > 0; i--) {
+        seed = (seed * 9301 + 49297) % 233280;
+        const j = Math.floor((seed / 233280) * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 // ===== Middleware =====
 // Simple token-based auth: token = username (for single-user desktop use)
 function requireAuth(req, res, next) {
@@ -261,7 +273,7 @@ router.post('/study/start', requireAuth, (req, res) => {
         if (sortMode === 'frequency') {
             newWords.sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
         } else if (sortMode === 'random') {
-            newWords.sort(() => Math.random() - 0.5);
+            seededShuffle(newWords);
         } else {
             newWords.sort((a, b) => (a.word || '').localeCompare(b.word || ''));
         }
@@ -450,7 +462,7 @@ router.get('/ai/preheat-words', requireAuth, (req, res) => {
     if (sortMode === 'frequency') {
         newWords.sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
     } else if (sortMode === 'random') {
-        newWords.sort(() => Math.random() - 0.5);
+        seededShuffle(newWords);
     } else {
         newWords.sort((a, b) => (a.word || '').localeCompare(b.word || ''));
     }
